@@ -63,3 +63,4 @@ https://neovise.me/sitemap-pages.xml
 https://neovise.me/sitemap-posts.xml
 https://neovise.me/sitemap-authors.xml
 https://neovise.me/sitemap-tags.xml
+https://neovise.me/how-micro-habits-reduce-screen-time/
