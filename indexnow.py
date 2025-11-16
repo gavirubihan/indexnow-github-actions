@@ -6,8 +6,8 @@ import os   # added to read GitHub Actions secret
 
 # ========== CONFIGURATION ==========
 API_KEY = os.getenv("INDEXNOW_API_KEY")   # read API key from GitHub Secrets
-SITE_URL = "https://neovise.me"
-SITEMAP_URL = "https://neovise.me/sitemap.xml"
+SITE_URL = os.getenv("SITE_URL")
+SITEMAP_URL = os.getenv("SITEMAP_URL")
 INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
 LOG_FILE = "indexnow_log.txt"
 URLS_FILE = "urls_to_submit.txt"
