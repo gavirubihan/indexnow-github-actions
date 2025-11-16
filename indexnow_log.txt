@@ -1659,3 +1659,31 @@ Step 3: Identifying new URLs...
 [2025-11-16 22:38:49] No new URLs found. All URLs have been previously submitted.
 [2025-11-16 22:38:49] ============================================================
 
+[2025-11-16 23:12:23] ============================================================
+[2025-11-16 23:12:23] Starting IndexNow Submission Process (New URLs Only)
+[2025-11-16 23:12:23] ============================================================
+[2025-11-16 23:12:23] 
+Step 1: Fetching URLs from sitemap...
+[2025-11-16 23:12:23] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-11-16 23:12:24] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-11-16 23:12:24] Fetching sitemap from https://neovise.me/sitemap-pages.xml
+[2025-11-16 23:12:25] Found 5 URLs in sitemap.
+[2025-11-16 23:12:26] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-11-16 23:12:26] Fetching sitemap from https://neovise.me/sitemap-posts.xml
+[2025-11-16 23:12:26] Found 37 URLs in sitemap.
+[2025-11-16 23:12:27] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-11-16 23:12:27] Fetching sitemap from https://neovise.me/sitemap-authors.xml
+[2025-11-16 23:12:27] Found 2 URLs in sitemap.
+[2025-11-16 23:12:28] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-11-16 23:12:28] Fetching sitemap from https://neovise.me/sitemap-tags.xml
+[2025-11-16 23:12:28] Found 18 URLs in sitemap.
+[2025-11-16 23:12:29] Found 62 URLs in sitemap.
+[2025-11-16 23:12:29] Total URLs in sitemap: 62
+[2025-11-16 23:12:29] 
+Step 2: Loading submission history...
+[2025-11-16 23:12:29] Loaded 66 previously submitted URLs
+[2025-11-16 23:12:29] 
+Step 3: Identifying new URLs...
+[2025-11-16 23:12:29] No new URLs found. All URLs have been previously submitted.
+[2025-11-16 23:12:29] ============================================================
+
