@@ -81,7 +81,7 @@ This script requires **three GitHub Secrets**:
 
 | Secret Name          | Description                                      | Example                                    |
 |----------------------|--------------------------------------------------|--------------------------------------------|
-| `INDEXNOW_API_KEY`   | Your IndexNow API key                            | `b72854fc06724b35b8e572783e5fbb9a`        |
+| `INDEXNOW_API_KEY`   | Your IndexNow API key                            | `b56754fc06724b35b8e2345783e5fbb9a`        |
 | `SITE_URL`           | Your website URL (without trailing slash)        | `https://neovise.me`                       |
 | `SITEMAP_URL`        | Your sitemap URL                                 | `https://neovise.me/sitemap.xml`           |
 
@@ -101,7 +101,7 @@ cd indexnow-submitter
 ### Step 2: Generate an IndexNow API Key
 
 1. Visit [IndexNow.org](https://www.indexnow.org/) or generate a random 32-character hexadecimal key
-2. Example: `b72854fc06724b35b8e572783e5fbb9a`
+2. Example: `b56754fc06724b35b8e2345783e5fbb9a`
 
 ### Step 3: Create the IndexNow Key File on Your Website
 
@@ -114,12 +114,12 @@ https://your-site.com/YOUR_INDEXNOW_KEY.txt
 
 **Example:**
 ```
-https://neovise.me/b72854fc06724b35b8e572783e5fbb9a.txt
+https://neovise.me/b56754fc06724b35b8e2345783e5fbb9a.txt
 ```
 
 **File contents** (plain text, only your key):
 ```
-b72854fc06724b35b8e572783e5fbb9a
+b56754fc06724b35b8e2345783e5fbb9a
 ```
 
 Upload this file to your website's root directory and ensure it's publicly accessible.
@@ -132,7 +132,7 @@ Upload this file to your website's root directory and ensure it's publicly acces
 
 #### `INDEXNOW_API_KEY`
 ```
-b72854fc06724b35b8e572783e5fbb9a
+b56754fc06724b35b8e2345783e5fbb9a
 ```
 
 #### `SITE_URL`
