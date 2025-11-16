@@ -59,3 +59,7 @@ https://neovise.me/psychology-behind-minimalist-digital-spaces/
 https://neovise.me/how-apples-new-vapor-chamber-cooling-works/
 https://neovise.me/golden-blood-discovery-rarest-blood-type/
 https://neovise.me/best-ai-tools-university-students-should-know/
+https://neovise.me/sitemap-pages.xml
+https://neovise.me/sitemap-posts.xml
+https://neovise.me/sitemap-authors.xml
+https://neovise.me/sitemap-tags.xml
