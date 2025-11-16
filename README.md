@@ -94,13 +94,13 @@ This script requires **three GitHub Secrets**:
 Click the **Fork** button at the top of this page, or clone it:
 
 ```bash
-git clone https://github.com/yourusername/indexnow-submitter.git
-cd indexnow-submitter
+git clone https://github.com/gavirubihan/indexnow-github-actions.git
+cd indexnow-github-actions
 ```
 
 ### Step 2: Generate an IndexNow API Key
 
-1. Visit [IndexNow.org](https://www.indexnow.org/) or generate a random 32-character hexadecimal key
+1. Visit [IndexNow.org](https://www.bing.com/indexnow/getstarted) or generate a random 32-character hexadecimal key
 2. Example: `b56754fc06724b35b8e2345783e5fbb9a`
 
 ### Step 3: Create the IndexNow Key File on Your Website
@@ -405,8 +405,8 @@ Contributions are welcome! Here's how you can help:
 
 If you encounter any issues or have questions:
 
-- 🐛 **Bug Reports:** [Open an issue](https://github.com/yourusername/indexnow-submitter/issues)
-- 💡 **Feature Requests:** [Open an issue](https://github.com/yourusername/indexnow-submitter/issues)
+- 🐛 **Bug Reports:** [Open an issue](https://github.com/gavirubihan/indexnow-github-actions/issues)
+- 💡 **Feature Requests:** [Open an issue](https://github.com/gavirubihan/indexnow-github-actions/issues)
 - 📧 **Questions:** Check existing issues or create a new one
 
 ---
@@ -435,7 +435,7 @@ If this project helped you, please consider:
 
 Created to improve SEO and indexing speed using IndexNow and GitHub Actions automation.
 
-**Maintained by:** [Your Name/Organization]
+**Maintained by:** [Gaviru Bihan]
 
 ---
 
