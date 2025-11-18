@@ -3493,3 +3493,11 @@ Step 1: Fetching URLs from sitemap...
 [2025-11-18 13:46:50] Fetching sitemap from https://neovise.me/sitemap.xml
 [2025-11-18 13:46:50] Failed to fetch sitemap: 500
 [2025-11-18 13:46:50] No URLs found. Exiting.
+[2025-11-18 14:13:50] ============================================================
+[2025-11-18 14:13:50] Starting IndexNow Submission Process (New URLs Only)
+[2025-11-18 14:13:50] ============================================================
+[2025-11-18 14:13:50] 
+Step 1: Fetching URLs from sitemap...
+[2025-11-18 14:13:50] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-11-18 14:13:51] Failed to fetch sitemap: 500
+[2025-11-18 14:13:51] No URLs found. Exiting.
