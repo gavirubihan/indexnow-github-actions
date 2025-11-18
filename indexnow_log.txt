@@ -3477,3 +3477,11 @@ Step 3: Identifying new URLs...
 [2025-11-18 12:28:59] No new URLs found. All URLs have been previously submitted.
 [2025-11-18 12:28:59] ============================================================
 
+[2025-11-18 13:08:27] ============================================================
+[2025-11-18 13:08:27] Starting IndexNow Submission Process (New URLs Only)
+[2025-11-18 13:08:27] ============================================================
+[2025-11-18 13:08:27] 
+Step 1: Fetching URLs from sitemap...
+[2025-11-18 13:08:27] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-11-18 13:08:28] Failed to fetch sitemap: 500
+[2025-11-18 13:08:28] No URLs found. Exiting.
