@@ -14,7 +14,8 @@ Before running the automation, complete these steps:
 - [ ] Generate an IndexNow API key
 - [ ] Create and upload the key verification file to your website
 - [ ] Add three GitHub Secrets (`INDEXNOW_API_KEY`, `SITE_URL`, `SITEMAP_URL`)
-- [ ] **Clean all `.txt` files** (delete their contents completely)
+- [ ] **Clean tracking files** (delete contents of `submission_history.json` and `indexnow_log.txt`)
+- [ ] Enable GitHub Actions workflow permissions (Read and write)
 - [ ] Enable GitHub Actions in your repository
 - [ ] Run the workflow manually to test (optional)
 - [ ] Monitor the first run in Actions tab
@@ -38,16 +39,18 @@ By notifying search engines instantly about new content, you can improve SEO per
 ## 🚀 Features
 
 - ✅ Automatically fetches URLs from your sitemap (including nested sub-sitemaps)
-- 🆕 Detects new and updated URLs (checks `lastmod`)
+- 🆕 Detects new and updated URLs (checks `lastmod` dates)
 - 📤 Submits only changed URLs to IndexNow API
 - 📊 Supports up to **10,000 URLs per batch**
 - 💾 Stores:
-  - Submission history with dates (`submission_history.json`)
+  - Submission history with dates in JSON format (`submission_history.json`)
   - Newly detected URLs (`urls_to_submit.txt`)
   - Detailed logs of every run (`indexnow_log.txt`)
 - ⏰ Runs automatically every 30 minutes using GitHub Actions
+- 🔄 Auto-commits history back to repository for persistence
 - 🔐 Fully secure using **GitHub Actions Secrets**
 - 🚫 No sensitive information stored in the repository
+- 🐛 Enhanced debug logging for troubleshooting
 
 ---
 
@@ -55,11 +58,10 @@ By notifying search engines instantly about new content, you can improve SEO per
 
 ```
 .
-├── indexnow.py                 # Main Python script
-├── submission_history.json     # History of submitted URLs with dates
-├── submitted_urls.txt          # Legacy history (auto-migrated)
+├── indexnow.py                 # Main Python script with smart change detection
+├── submission_history.json     # History of submitted URLs with lastmod dates
 ├── urls_to_submit.txt          # Newly detected URLs awaiting submission
-├── indexnow_log.txt            # Detailed runtime logs
+├── indexnow_log.txt            # Detailed runtime logs with debug info
 ├── .github/
 │   └── workflows/
 │       └── indexnow.yml        # GitHub Actions workflow configuration
@@ -146,28 +148,37 @@ https://neovise.me
 https://neovise.me/sitemap.xml
 ```
 
-### Step 5: Clean the Tracking Files
+### Step 5: Enable GitHub Actions Permissions
 
-**IMPORTANT:** Before running the script for the first time, clean all `.txt` files:
+**CRITICAL STEP:** The workflow needs write permissions to commit the updated history file.
 
-1. Open each of these files in your repository:
-   - `submission_history.json` (if it exists)
-   - `submitted_urls.txt`
-   - `urls_to_submit.txt`
+1. Go to **Settings** → **Actions** → **General**
+2. Scroll down to **Workflow permissions**
+3. Select **"Read and write permissions"**
+4. Check **"Allow GitHub Actions to create and approve pull requests"** (optional)
+5. Click **Save**
+
+### Step 6: Clean the Tracking Files
+
+**IMPORTANT:** Before running the script for the first time, clean the tracking files:
+
+1. Open these files in your repository:
+   - `submission_history.json`
    - `indexnow_log.txt`
+   - `urls_to_submit.txt`
 
 2. **Delete all content** inside each file (make them completely empty)
 
 3. Commit the changes:
    ```bash
-   git add *.txt
+   git add submission_history.json indexnow_log.txt urls_to_submit.txt
    git commit -m "Clean tracking files for first run"
    git push
    ```
 
 **Why?** These files may contain example data or test URLs. Cleaning them ensures your automation starts fresh with only your actual website URLs.
 
-### Step 6: Enable GitHub Actions
+### Step 7: Enable GitHub Actions
 
 1. Go to the **Actions** tab in your repository
 2. Click **I understand my workflows, go ahead and enable them**
@@ -179,14 +190,38 @@ https://neovise.me/sitemap.xml
 
 The included workflow (`.github/workflows/indexnow.yml`) automatically:
 
-1. ✅ Installs Python 3.x
-2. 📦 Installs required dependencies
-3. 🔄 Runs the IndexNow submission script
-4. 📤 Submits new URLs to IndexNow
-5. 💾 Saves logs and updates URL history
-6. 🔁 Commits changes back to the repository
+1. ✅ Checks out the repository
+2. 🐍 Installs Python 3.10
+3. 📦 Installs required dependencies (`requests`)
+4. 🔄 Runs the IndexNow submission script
+5. 📤 Submits new/updated URLs to IndexNow
+6. 💾 Saves logs and updates URL history
+7. 🔁 **Commits `submission_history.json` back to the repository**
+8. 📊 Uploads artifacts for debugging
 
 **Default Schedule:** Every 30 minutes
+
+### How History Persistence Works
+
+The workflow includes a critical step that commits the updated `submission_history.json` back to the repository:
+
+```yaml
+- name: Commit updated history
+  run: |
+    git config user.name "GitHub Actions Bot"
+    git config user.email "actions@github.com"
+    git add submission_history.json indexnow_log.txt urls_to_submit.txt || true
+    if ! git diff --cached --quiet; then
+      git commit -m "Update IndexNow submission history [skip ci]"
+      git push
+    fi
+```
+
+This ensures that:
+- ✅ Previously submitted URLs are remembered between runs
+- ✅ Only new or updated content is submitted
+- ✅ No duplicate submissions occur
+- ✅ The `[skip ci]` tag prevents infinite workflow loops
 
 ### Manual Trigger
 
@@ -205,28 +240,46 @@ You can also manually trigger the workflow:
 graph TD
     A[GitHub Actions Triggers] --> B[Fetch Sitemap]
     B --> C[Extract URLs & Lastmod Dates]
-    C --> D[Load Submission History]
+    C --> D[Load submission_history.json]
     D --> E{New or Updated?}
     E -->|Yes| F[Save to urls_to_submit.txt]
     E -->|No| G[Log: No Changes]
     F --> H[Submit to IndexNow API]
     H --> I[Update submission_history.json]
-    I --> J[Log Results]
-    G --> J
-    J --> K[Commit Changes to Repo]
+    I --> J[Commit History to Repo]
+    J --> K[Log Results]
+    G --> K
 ```
 
 **Detailed Process:**
 
-1. **Fetch Sitemap:** Downloads your sitemap XML file
-2. **Parse URLs:** Extracts all `<loc>` URLs and `<lastmod>` dates
-3. **Compare:** Checks `submission_history.json` for existing entries
-4. **Detect Changes:** Identifies new URLs OR URLs where `lastmod` > stored date
-5. **Save:** Writes eligible URLs to `urls_to_submit.txt`
-6. **Submit:** Sends URLs to IndexNow API endpoint
-7. **Update History:** Saves new dates to `submission_history.json`
-8. **Log:** Records all activities in `indexnow_log.txt`
-9. **Commit:** GitHub Actions commits updated files automatically
+1. **Fetch Sitemap:** Downloads your sitemap XML file (supports sitemap indexes with sub-sitemaps)
+2. **Parse URLs:** Extracts all `<loc>` URLs and `<lastmod>` dates from all sitemaps
+3. **Load History:** Reads `submission_history.json` containing previously submitted URLs and their dates
+4. **Compare Dates:** For each URL, compares sitemap `lastmod` with stored date
+5. **Detect Changes:** Identifies:
+   - **New URLs** (not in history)
+   - **Updated URLs** (sitemap lastmod > stored lastmod)
+6. **Save:** Writes eligible URLs to `urls_to_submit.txt`
+7. **Submit:** Sends URLs to IndexNow API endpoint in a single batch
+8. **Update History:** Saves new lastmod dates to `submission_history.json`
+9. **Commit:** GitHub Actions commits updated history back to repository
+10. **Log:** Records all activities with timestamps and debug info in `indexnow_log.txt`
+
+### Smart Change Detection
+
+The script uses intelligent date comparison:
+
+```python
+# Example: Only submits if content was updated
+Sitemap lastmod: 2025-11-30T03:08:57.022Z
+History lastmod: 2025-11-16T12:49:14.000Z
+Action: SUBMIT (content was updated)
+
+Sitemap lastmod: 2025-11-29T02:18:01.000Z  
+History lastmod: 2025-11-29T02:18:01.000Z
+Action: SKIP (no changes)
+```
 
 ---
 
@@ -236,12 +289,25 @@ graph TD
 
 The script generates three tracking files:
 
-| File                    | Purpose                                      |
-|-------------------------|----------------------------------------------|
-| `submission_history.json` | JSON record of URLs and their last submission dates |
-| `submitted_urls.txt`    | Legacy text file (migrated automatically)    |
-| `urls_to_submit.txt`    | New/Updated URLs detected in the current run |
-| `indexnow_log.txt`      | Detailed logs with timestamps and status     |
+| File                    | Purpose                                      | Format |
+|-------------------------|----------------------------------------------|--------|
+| `submission_history.json` | Records all submitted URLs with their lastmod dates | JSON |
+| `urls_to_submit.txt`    | New/Updated URLs detected in the current run | Plain text |
+| `indexnow_log.txt`      | Detailed logs with timestamps and debug info | Plain text |
+
+### Example Log Output
+
+```
+[2025-11-30 04:46:53] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-11-30 04:46:53] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-11-30 04:46:53] Loaded history for 76 URLs
+[2025-11-30 04:46:53] Updated content: https://neovise.me/article/ (2025-11-30 > 2025-11-29)
+[2025-11-30 04:46:53] Submitting 2 URLs...
+[2025-11-30 04:46:53] DEBUG: Response status: 200
+[2025-11-30 04:46:53] SUCCESS: 2 URLs submitted
+[2025-11-30 04:46:53] DEBUG: Updated 2 URLs in history dict
+[2025-11-30 04:46:53] Saved history to submission_history.json
+```
 
 ### Viewing Logs
 
@@ -251,8 +317,14 @@ The script generates three tracking files:
 3. Click on the job name
 4. Expand log sections to view output
 
+**Download Artifacts:**
+1. Scroll to the bottom of the workflow run
+2. Download **indexnow-logs** artifact
+3. Extract and view `indexnow_log.txt`
+
 **In Repository:**
 - View `indexnow_log.txt` directly in your repo for historical logs
+- View `submission_history.json` to see all submitted URLs and dates
 
 ---
 
@@ -288,12 +360,36 @@ on:
 
 **Solution:** Ensure `indexnow.py` is in the repository root folder, not in a subdirectory.
 
-#### ❌ Script submitting wrong URLs or old data
+#### ❌ History file not updating / Same URLs submitted repeatedly
 
-**Solution:** 
-- Clean all `.txt` files before first run (see Step 5 in Setup Instructions)
-- Ensure `submitted_urls.txt` doesn't contain test/example URLs
-- Delete content from all tracking files and let the script rebuild them fresh
+**Symptoms:**
+- Log shows "Updated content" for the same URLs every run
+- `submission_history.json` file modification date doesn't change
+- Same URLs appear in every workflow run
+
+**Root Cause:** The workflow doesn't have permission to commit changes, or the commit step is failing.
+
+**Solutions:**
+
+1. **Enable Write Permissions** (Most Common Fix):
+   - Go to **Settings** → **Actions** → **General**
+   - Under "Workflow permissions", select **"Read and write permissions"**
+   - Click **Save**
+
+2. **Verify Commit Step in Logs:**
+   - Check Actions logs for "✅ History updated and pushed"
+   - If you see errors about git push failing, permissions aren't set correctly
+
+3. **Check for `[skip ci]` Tag:**
+   - The commit message includes `[skip ci]` to prevent infinite loops
+   - If missing, the workflow might trigger itself repeatedly
+
+4. **Manual Verification:**
+   ```bash
+   # Check if file was updated
+   git log --oneline -5 submission_history.json
+   # Should show recent commits by "GitHub Actions Bot"
+   ```
 
 #### ❌ HTTP 403 or 422: Key verification failed
 
@@ -301,6 +397,7 @@ on:
 - Verify your IndexNow key file exists at `https://your-site.com/YOUR_KEY.txt`
 - Ensure the file contains only the key (no extra spaces or characters)
 - Check that `INDEXNOW_API_KEY` secret matches the key file exactly
+- Test the key file URL in a browser to confirm it's publicly accessible
 
 #### ❌ "No URLs found in sitemap"
 
@@ -308,20 +405,33 @@ on:
 - Verify your sitemap URL is correct and publicly accessible
 - Test the sitemap URL in a browser
 - Ensure the sitemap is valid XML format
+- Check for namespace issues (the script handles both with and without namespaces)
 
 #### ❌ "Permission denied" when committing
 
 **Solution:**
-- Go to **Settings** → **Actions** → **General**
-- Under "Workflow permissions", select "Read and write permissions"
-- Click **Save**
+- Follow Step 5 in Setup Instructions to enable write permissions
+- Ensure the workflow has `permissions: contents: write` in the YAML file
 
 #### ⚠️ Workflow not running automatically
 
 **Solution:**
 - Ensure GitHub Actions is enabled for your repository
 - Check that the workflow file is in `.github/workflows/` directory
-- Verify the YAML syntax is correct
+- Verify the YAML syntax is correct (use a YAML validator)
+- Check if the repository has any branch protection rules blocking Actions
+
+#### 🐛 Debug Mode
+
+To get detailed debug information, check `indexnow_log.txt` for these lines:
+
+```
+DEBUG: Payload host: your-site.com
+DEBUG: Response status: 200
+DEBUG: Submission success = True
+DEBUG: Updated X URLs in history dict
+DEBUG: save_submission_history returned True
+```
 
 ---
 
@@ -330,17 +440,47 @@ on:
 ### IndexNow Limits
 
 - Maximum **10,000 URLs** per submission
-- Recommended to avoid excessive requests (our 30-minute schedule is safe)
+- Rate limiting may apply (429 status code triggers automatic retry)
 - Multiple submissions of the same URL are harmless but unnecessary
 
 ### Best Practices
 
-- ✅ Submit only when you have new content
-- ✅ Use a consistent sitemap structure
+- ✅ Submit only when you have new content (this script does this automatically)
+- ✅ Use a consistent sitemap structure with accurate `lastmod` dates
 - ✅ Keep your sitemap updated and accessible
 - ✅ Monitor logs for any errors
-- ❌ Don't submit the same URLs repeatedly
+- ✅ Run at reasonable intervals (30 minutes is optimal)
+- ❌ Don't submit the same URLs repeatedly (the script prevents this)
 - ❌ Don't spam the API with empty submissions
+- ❌ Don't manually edit `submission_history.json` (let the script manage it)
+
+### What Happens During Each Run
+
+**Scenario 1: New Content**
+```
+✅ Fetches sitemap
+✅ Finds 2 new URLs
+✅ Submits to IndexNow (Status: 200)
+✅ Updates history
+✅ Commits changes
+```
+
+**Scenario 2: No Changes**
+```
+✅ Fetches sitemap
+ℹ️ No new or updated content
+⏭️ Skips submission
+⏭️ No changes to commit
+```
+
+**Scenario 3: Updated Content**
+```
+✅ Fetches sitemap
+✅ Detects URL with newer lastmod date
+✅ Submits to IndexNow
+✅ Updates history with new date
+✅ Commits changes
+```
 
 ---
 
@@ -350,6 +490,8 @@ on:
 - 🚫 No API keys or URLs are exposed in the code
 - ✅ Secrets are never logged or printed
 - 🔒 Repository can be public without security risks
+- ✅ Workflow uses `[skip ci]` to prevent infinite loops
+- 🔐 GitHub Actions Bot identity used for commits
 
 ---
 
@@ -396,11 +538,13 @@ Contributions are welcome! Here's how you can help:
 ### Ideas for Contributions
 
 - Support for additional search engines
-- Error notification system (email/Slack)
-- URL filtering options
+- Error notification system (email/Slack/Discord)
+- URL filtering options (include/exclude patterns)
 - Statistics dashboard
-- Multi-sitemap support
+- Multi-sitemap support improvements
 - Docker containerization
+- Web UI for monitoring
+- Retry logic enhancements
 
 ---
 
@@ -411,6 +555,7 @@ If you encounter any issues or have questions:
 - 🐛 **Bug Reports:** [Open an issue](https://github.com/gavirubihan/indexnow-github-actions/issues)
 - 💡 **Feature Requests:** [Open an issue](https://github.com/gavirubihan/indexnow-github-actions/issues)
 - 📧 **Questions:** Check existing issues or create a new one
+- 📖 **Documentation:** Read this README thoroughly
 
 ---
 
@@ -422,15 +567,37 @@ If this project helped you, please consider:
 - 🍴 Forking it for your own use
 - 📢 Sharing it with others
 - 🤝 Contributing improvements
+- 💬 Providing feedback
 
 ---
 
 ## 📚 Additional Resources
 
 - [IndexNow Official Documentation](https://www.indexnow.org/documentation)
+- [IndexNow FAQ](https://www.indexnow.org/faq)
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
+- [GitHub Actions Permissions](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token)
 - [Sitemap Protocol](https://www.sitemaps.org/protocol.html)
 - [Cron Expression Guide](https://crontab.guru/)
+- [Python Requests Library](https://requests.readthedocs.io/)
+
+---
+
+## 🔄 Changelog
+
+### v2.0 (Current)
+- ✅ Migrated from `submitted_urls.txt` to `submission_history.json`
+- ✅ Added smart change detection using lastmod dates
+- ✅ Enhanced debug logging
+- ✅ Auto-commit history back to repository
+- ✅ Improved error handling
+- ✅ Better workflow permissions handling
+- ✅ Added `[skip ci]` to prevent infinite loops
+
+### v1.0
+- ✅ Initial release
+- ✅ Basic URL submission
+- ✅ Simple tracking with text file
 
 ---
 
@@ -438,7 +605,7 @@ If this project helped you, please consider:
 
 Created to improve SEO and indexing speed using IndexNow and GitHub Actions automation.
 
-**Maintained by:** [Gaviru Bihan]
+**Maintained by:** [Gaviru Bihan](https://github.com/gavirubihan)
 
 ---
 
