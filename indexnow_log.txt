@@ -17274,3 +17274,31 @@ Step 3: Identifying new URLs...
 [2025-11-30 03:05:06] Submitting 76 URLs...
 [2025-11-30 03:05:07] SUCCESS: 76 URLs submitted (Status: 200)
 [2025-11-30 03:05:07] Saved history to submission_history.json
+[2025-11-30 03:07:37] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-11-30 03:07:38] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-11-30 03:07:39] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-11-30 03:07:40] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-11-30 03:07:40] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-11-30 03:07:41] Loaded history for 76 URLs
+[2025-11-30 03:10:07] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-11-30 03:10:08] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-11-30 03:10:09] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-11-30 03:10:10] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-11-30 03:10:10] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-11-30 03:10:11] Loaded history for 76 URLs
+[2025-11-30 03:10:11] Updated content: https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/ (2025-11-30T03:08:57.022Z)
+[2025-11-30 03:10:11] Updated content: https://neovise.me/author/neovise-staff/ (2025-11-30T03:08:14.691Z)
+[2025-11-30 03:10:11] Submitting 2 URLs...
+[2025-11-30 03:10:12] SUCCESS: 2 URLs submitted (Status: 200)
+[2025-11-30 03:10:12] Saved history to submission_history.json
+[2025-11-30 04:08:03] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-11-30 04:08:05] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-11-30 04:08:05] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-11-30 04:08:06] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-11-30 04:08:07] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-11-30 04:08:07] Loaded history for 76 URLs
+[2025-11-30 04:08:07] Updated content: https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/ (2025-11-30T03:08:57.022Z)
+[2025-11-30 04:08:07] Updated content: https://neovise.me/author/neovise-staff/ (2025-11-30T03:08:14.691Z)
+[2025-11-30 04:08:07] Submitting 2 URLs...
+[2025-11-30 04:08:08] SUCCESS: 2 URLs submitted (Status: 200)
+[2025-11-30 04:08:08] Saved history to submission_history.json
