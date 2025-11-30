@@ -1,32 +1,68 @@
 import requests
 import xml.etree.ElementTree as ET
 import time
+import json
+import os
 from datetime import datetime
-import os   # added to read GitHub Actions secret
 
-# ========== CONFIGURATION ==========
-API_KEY = os.getenv("INDEXNOW_API_KEY")   # read API key from GitHub Secrets
+# ========== CONFIGURATION (GitHub Actions) ==========
+# Read secrets/variables from environment
+API_KEY = os.getenv("INDEXNOW_API_KEY")
 SITE_URL = os.getenv("SITE_URL")
 SITEMAP_URL = os.getenv("SITEMAP_URL")
+
+# Constants
 INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
 LOG_FILE = "indexnow_log.txt"
 URLS_FILE = "urls_to_submit.txt"
-SUBMITTED_URLS_FILE = "submitted_urls.txt"  # Track submitted URLs
+SUBMITTED_URLS_FILE = "submitted_urls.txt"  # Legacy tracking file
+SUBMISSION_HISTORY_FILE = "submission_history.json"  # New tracking file with dates
 
 # Configure session with DNS override
 session = requests.Session()
 session.trust_env = False
 
-def log_message(message):
-    """Save message with timestamp."""
-    timestamp = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
-    with open(LOG_FILE, "a", encoding="utf-8") as log:
-        log.write(f"{timestamp} {message}\n")
-    print(message)
+# ========== LOGGING & OUTPUT ==========
 
-def fetch_sitemap_urls(sitemap_url):
-    """Fetch all URLs from sitemap.xml with extended timeout."""
-    log_message(f"Fetching sitemap from {sitemap_url}")
+def log_file(message):
+    """Save message to log file with timestamp."""
+    timestamp = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
+    try:
+        with open(LOG_FILE, "a", encoding="utf-8") as log:
+            log.write(f"{timestamp} {message}\n")
+    except Exception:
+        pass # Fail silently if logging fails
+
+def console_print(message, level="INFO"):
+    """Print clean message to console."""
+    prefix = "   "
+    if level == "STEP":
+        print(f"\n{message}")
+        return
+    elif level == "SUCCESS":
+        prefix = "✅ "
+    elif level == "WARNING":
+        prefix = "⚠️ "
+    elif level == "ERROR":
+        prefix = "❌ "
+    elif level == "INFO":
+        prefix = "   "
+    
+    print(f"{prefix}{message}")
+
+def log(message, console=True, level="INFO"):
+    """Log to file and optionally print to console."""
+    log_file(message)
+    if console:
+        console_print(message, level)
+
+# ========== CORE FUNCTIONS ==========
+
+def fetch_sitemap_urls(sitemap_url, silent_console=False):
+    """Fetch all URLs from sitemap.xml with lastmod dates."""
+    if not silent_console:
+        log_file(f"Fetching sitemap from {sitemap_url}")
+    
     try:
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
@@ -39,9 +75,8 @@ def fetch_sitemap_urls(sitemap_url):
         
         if response.status_code == 200:
             xml_data = response.text
-            
             root = ET.fromstring(xml_data)
-            urls = []
+            urls = {}  # Dictionary: {url: lastmod}
             
             # Define common namespaces
             namespaces = {
@@ -51,115 +86,123 @@ def fetch_sitemap_urls(sitemap_url):
                 'video': 'http://www.google.com/schemas/sitemap-video/1.1'
             }
             
+            # Helper to extract URL and Lastmod
+            def extract_url_info(element, ns=None):
+                if ns:
+                    loc = element.find('sm:loc', ns)
+                    lastmod = element.find('sm:lastmod', ns)
+                else:
+                    loc = element.find('loc')
+                    lastmod = element.find('lastmod')
+                
+                if loc is not None and loc.text:
+                    url = loc.text.strip()
+                    date_str = lastmod.text.strip() if lastmod is not None and lastmod.text else None
+                    return url, date_str
+                return None, None
+
             # Try WITH namespace
             for url_elem in root.findall('sm:url', namespaces):
-                loc_elem = url_elem.find('sm:loc', namespaces)
-                if loc_elem is not None and loc_elem.text:
-                    urls.append(loc_elem.text.strip())
+                url, lastmod = extract_url_info(url_elem, namespaces)
+                if url:
+                    urls[url] = lastmod
             
             # Try WITHOUT namespace (fallback)
             if not urls:
                 for url_elem in root.findall('.//url'):
-                    loc_elem = url_elem.find('loc')
-                    if loc_elem is not None and loc_elem.text:
-                        urls.append(loc_elem.text.strip())
+                    url, lastmod = extract_url_info(url_elem)
+                    if url:
+                        urls[url] = lastmod
             
             # Check for sitemap index
             if not urls:
                 for sitemap_elem in root.findall('sm:sitemap', namespaces):
                     loc_elem = sitemap_elem.find('sm:loc', namespaces)
                     if loc_elem is not None and loc_elem.text:
-                        log_message(f"Found sub-sitemap: {loc_elem.text}")
+                        log_file(f"Found sub-sitemap: {loc_elem.text}")
                         # Recursively fetch sub-sitemap
-                        sub_urls = fetch_sitemap_urls(loc_elem.text.strip())
-                        urls.extend(sub_urls)
-                        time.sleep(1)
+                        sub_urls = fetch_sitemap_urls(loc_elem.text.strip(), silent_console=True)
+                        urls.update(sub_urls)
+                        time.sleep(0.5) # Small delay to be nice
             
-            if urls:
-                log_message(f"Found {len(urls)} URLs in sitemap.")
             return urls
         else:
-            log_message(f"Failed to fetch sitemap: {response.status_code}")
-            return []
+            log(f"Failed to fetch sitemap: {response.status_code}", level="ERROR")
+            return {}
             
-    except ET.ParseError as e:
-        log_message(f"XML parsing error: {e}")
-        return []
-    except requests.exceptions.Timeout:
-        log_message("Request timed out")
-        return []
-    except requests.exceptions.ConnectionError as e:
-        log_message(f"Connection error: {e}")
-        return []
     except Exception as e:
-        log_message(f"Error fetching sitemap: {e}")
-        import traceback
-        log_message(traceback.format_exc())
-        return []
+        log(f"Error fetching sitemap: {e}", level="ERROR")
+        return {}
 
-def load_submitted_urls():
-    """Load previously submitted URLs from tracking file."""
-    try:
-        with open(SUBMITTED_URLS_FILE, "r", encoding="utf-8") as f:
-            urls = set(line.strip() for line in f if line.strip())
-        log_message(f"Loaded {len(urls)} previously submitted URLs")
-        return urls
-    except FileNotFoundError:
-        log_message(f"No previous submission history found. Creating new tracking file.")
-        return set()
-    except Exception as e:
-        log_message(f"Error loading submitted URLs: {e}")
-        return set()
+def load_submission_history():
+    """Load submission history from JSON file."""
+    history = {}
+    if os.path.exists(SUBMISSION_HISTORY_FILE):
+        try:
+            with open(SUBMISSION_HISTORY_FILE, "r", encoding="utf-8") as f:
+                history = json.load(f)
+            log_file(f"Loaded history for {len(history)} URLs")
+            return history
+        except Exception as e:
+            log(f"Error loading JSON history: {e}", level="ERROR")
+    
+    # Fallback: Migrate from legacy text file
+    if os.path.exists(SUBMITTED_URLS_FILE):
+        log("Migrating legacy submission history...", level="WARNING")
+        try:
+            with open(SUBMITTED_URLS_FILE, "r", encoding="utf-8") as f:
+                legacy_urls = [line.strip() for line in f if line.strip()]
+            for url in legacy_urls:
+                history[url] = "1970-01-01T00:00:00Z"
+            return history
+        except Exception:
+            pass
+            
+    return history
 
-def save_submitted_urls(urls):
-    """Append newly submitted URLs to tracking file."""
+def save_submission_history(history):
+    """Save submission history to JSON file."""
     try:
-        with open(SUBMITTED_URLS_FILE, "a", encoding="utf-8") as f:
-            for url in urls:
-                f.write(url + "\n")
-        log_message(f"Added {len(urls)} URLs to submission history")
+        with open(SUBMISSION_HISTORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(history, f, indent=2)
+        log_file(f"Saved history to {SUBMISSION_HISTORY_FILE}")
         return True
     except Exception as e:
-        log_message(f"Error saving submitted URLs: {e}")
+        log(f"Error saving history: {e}", level="ERROR")
         return False
 
-def get_new_urls(all_urls, submitted_urls):
-    """Compare sitemap URLs with submitted URLs to find new ones."""
-    all_urls_set = set(all_urls)
-    new_urls = all_urls_set - submitted_urls
-    return list(new_urls)
+def identify_urls_to_submit(sitemap_urls, history):
+    """Identify new or updated URLs to submit."""
+    to_submit = []
+    
+    for url, current_lastmod in sitemap_urls.items():
+        if url not in history:
+            log_file(f"New URL found: {url}")
+            to_submit.append(url)
+            continue
+            
+        history_lastmod = history.get(url)
+        if current_lastmod and history_lastmod:
+            if current_lastmod > history_lastmod:
+                log_file(f"Updated content: {url} ({current_lastmod})")
+                to_submit.append(url)
+    
+    return to_submit
 
 def save_urls_to_file(urls, filename):
-    """Save URLs to text file (overwrites existing file)."""
     try:
         with open(filename, "w", encoding="utf-8") as f:
             for url in urls:
                 f.write(url + "\n")
-        log_message(f"Saved {len(urls)} URLs to {filename}")
         return True
     except Exception as e:
-        log_message(f"Error saving URLs to file: {e}")
+        log(f"Error saving URLs to file: {e}", level="ERROR")
         return False
 
-def load_urls_from_file(filename):
-    """Load URLs from text file."""
-    try:
-        with open(filename, "r", encoding="utf-8") as f:
-            urls = [line.strip() for line in f if line.strip()]
-        log_message(f"Loaded {len(urls)} URLs from {filename}")
-        return urls
-    except FileNotFoundError:
-        log_message(f"File not found: {filename}")
-        return []
-    except Exception as e:
-        log_message(f"Error loading URLs from file: {e}")
-        return []
-
 def submit_to_indexnow(urls):
-    """Submit all URLs to IndexNow API in one request."""
+    """Submit URLs to IndexNow API."""
     if len(urls) > 10000:
-        log_message(f"WARNING: You have {len(urls)} URLs. IndexNow allows max 10,000 per request.")
-        log_message("Submitting first 10,000 URLs only.")
+        log("WARNING: >10,000 URLs. Submitting first 10k only.", level="WARNING")
         urls = urls[:10000]
     
     payload = {
@@ -170,106 +213,90 @@ def submit_to_indexnow(urls):
     }
 
     try:
-        log_message(f"Submitting {len(urls)} URLs to IndexNow...")
+        log_file(f"Submitting {len(urls)} URLs...")
         response = session.post(INDEXNOW_ENDPOINT, json=payload, timeout=60)
         status = response.status_code
 
         if status == 200 or status == 202:
-            log_message(f"SUCCESS: All {len(urls)} URLs submitted successfully (Status: {status}).")
+            log_file(f"SUCCESS: {len(urls)} URLs submitted (Status: {status})")
             return True
-        elif status == 400:
-            log_message(f"ERROR 400: Bad Request - Invalid format.")
-            log_message(f"Response: {response.text}")
-            return False
-        elif status == 403:
-            log_message(f"ERROR 403: Invalid or missing key file ({payload['keyLocation']}).")
-            log_message(f"Make sure {SITE_url}/{API_KEY}.txt exists and contains: {API_KEY}")
-            return False
-        elif status == 422:
-            log_message(f"ERROR 422: URLs do not belong to host or key mismatch.")
-            log_message(f"Response: {response.text}")
-            return False
         elif status == 429:
-            log_message(f"ERROR 429: Too many requests - retrying after 5 minutes.")
-            time.sleep(300)
+            log("Too many requests (429). Retrying in 60s...", level="WARNING")
+            time.sleep(60)
             return submit_to_indexnow(urls)
         else:
-            log_message(f"Unexpected error {status}: {response.text}")
+            log(f"Submission failed: {status} - {response.text}", level="ERROR")
             return False
 
-    except requests.exceptions.Timeout:
-        log_message(f"Request timed out. Try reducing the number of URLs or check your connection.")
-        return False
     except Exception as e:
-        log_message(f"Exception occurred: {e}")
-        import traceback
-        log_message(traceback.format_exc())
+        log(f"Submission error: {e}", level="ERROR")
         return False
 
 def main():
-    log_message("=" * 60)
-    log_message("Starting IndexNow Submission Process (New URLs Only)")
-    log_message("=" * 60)
+    print("=" * 50)
+    print("      IndexNow Submission (Smart Mode)")
+    print("=" * 50)
     
-    # Step 1: Fetch URLs from sitemap
-    log_message("\nStep 1: Fetching URLs from sitemap...")
-    all_urls = fetch_sitemap_urls(SITEMAP_URL)
-
-    if not all_urls:
-        log_message("No URLs found. Exiting.")
+    # Validate Environment Variables
+    if not API_KEY or not SITE_URL or not SITEMAP_URL:
+        console_print("Missing environment variables!", level="ERROR")
+        console_print("Ensure INDEXNOW_API_KEY, SITE_URL, and SITEMAP_URL are set.", level="ERROR")
         return
 
-    log_message(f"Total URLs in sitemap: {len(all_urls)}")
-
-    # Step 2: Load previously submitted URLs
-    log_message("\nStep 2: Loading submission history...")
-    submitted_urls = load_submitted_urls()
-
-    # Step 3: Find new URLs
-    log_message("\nStep 3: Identifying new URLs...")
-    new_urls = get_new_urls(all_urls, submitted_urls)
-    
-    if not new_urls:
-        log_message("No new URLs found. All URLs have been previously submitted.")
-        log_message("=" * 60 + "\n")
+    # Step 1: Fetch
+    console_print("[1/5] Fetching sitemaps...", level="STEP")
+    sitemap_data = fetch_sitemap_urls(SITEMAP_URL)
+    if not sitemap_data:
+        console_print("No URLs found in sitemap.", level="ERROR")
         return
+    console_print(f"Found {len(sitemap_data)} URLs in sitemap.", level="INFO")
+
+    # Step 2: History
+    console_print("[2/5] Loading history...", level="STEP")
+    history = load_submission_history()
+    console_print(f"Loaded {len(history)} previously submitted URLs.", level="INFO")
+
+    # Step 3: Identify
+    console_print("[3/5] Analyzing for updates...", level="STEP")
+    urls_to_submit = identify_urls_to_submit(sitemap_data, history)
     
-    log_message(f"Found {len(new_urls)} NEW URLs to submit")
-
-    # Step 4: Save new URLs to text file
-    log_message(f"\nStep 4: Saving new URLs to {URLS_FILE}...")
-    if not save_urls_to_file(new_urls, URLS_FILE):
-        log_message("Failed to save URLs. Exiting.")
-        return
-
-    # Step 5: Load URLs from text file
-    log_message(f"\nStep 5: Loading URLs from {URLS_FILE}...")
-    urls_to_submit = load_urls_from_file(URLS_FILE)
-
     if not urls_to_submit:
-        log_message("No URLs loaded from file. Exiting.")
+        console_print("No new or updated content found.", level="SUCCESS")
+        print("\n" + "=" * 50)
+        print("                  SUMMARY")
+        print("=" * 50)
+        print(f" Total URLs:      {len(sitemap_data)}")
+        print(f" New/Updated:     0")
+        print(f" Status:          Skipped (Nothing new)")
+        print("=" * 50 + "\n")
         return
+    
+    console_print(f"Found {len(urls_to_submit)} URLs to submit.", level="INFO")
 
-    # Step 6: Submit new URLs to IndexNow
-    log_message(f"\nStep 6: Submitting new URLs to IndexNow...")
+    # Step 4: Save temp
+    console_print(f"[4/5] Saving list to {URLS_FILE}...", level="STEP")
+    save_urls_to_file(urls_to_submit, URLS_FILE)
+
+    # Step 5: Submit
+    console_print("[5/5] Submitting to IndexNow...", level="STEP")
     success = submit_to_indexnow(urls_to_submit)
 
-    # Step 7: Update submission history if successful
+    # Update History
     if success:
-        log_message("\nStep 7: Updating submission history...")
-        save_submitted_urls(urls_to_submit)
+        for url in urls_to_submit:
+            if url in sitemap_data:
+                history[url] = sitemap_data[url]
+        save_submission_history(history)
+        console_print("History updated.", level="SUCCESS")
 
     # Summary
-    log_message("\n" + "=" * 60)
-    log_message("Submission Summary")
-    log_message("=" * 60)
-    log_message(f"Total URLs in sitemap: {len(all_urls)}")
-    log_message(f"Previously submitted: {len(submitted_urls)}")
-    log_message(f"New URLs found: {len(new_urls)}")
-    log_message(f"Submission status: {'SUCCESS' if success else 'FAILED'}")
-    log_message(f"New URLs file: {URLS_FILE}")
-    log_message(f"History file: {SUBMITTED_URLS_FILE}")
-    log_message("=" * 60 + "\n")
+    print("\n" + "=" * 50)
+    print("                  SUMMARY")
+    print("=" * 50)
+    print(f" Total URLs:      {len(sitemap_data)}")
+    print(f" Submitted:       {len(urls_to_submit)}")
+    print(f" Status:          {'SUCCESS' if success else 'FAILED'}")
+    print("=" * 50 + "\n")
 
 if __name__ == "__main__":
     main()

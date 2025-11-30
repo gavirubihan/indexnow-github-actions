@@ -4,7 +4,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Automation](https://img.shields.io/badge/automation-GitHub%20Actions-green.svg)](https://github.com/features/actions)
 
-Automated IndexNow submission system for any website. Runs every 30 minutes using GitHub Actions and submits **only new URLs** from your sitemap to improve SEO and speed up search engine indexing.
+Automated IndexNow submission system for any website. Runs every 30 minutes using GitHub Actions and submits **new and updated URLs** from your sitemap to improve SEO and speed up search engine indexing.
 
 ## 🚀 Quick Start Checklist
 
@@ -38,11 +38,11 @@ By notifying search engines instantly about new content, you can improve SEO per
 ## 🚀 Features
 
 - ✅ Automatically fetches URLs from your sitemap (including nested sub-sitemaps)
-- 🆕 Detects new URLs since the last submission
-- 📤 Submits only new URLs to IndexNow API
+- 🆕 Detects new and updated URLs (checks `lastmod`)
+- 📤 Submits only changed URLs to IndexNow API
 - 📊 Supports up to **10,000 URLs per batch**
 - 💾 Stores:
-  - Submitted URL history (`submitted_urls.txt`)
+  - Submission history with dates (`submission_history.json`)
   - Newly detected URLs (`urls_to_submit.txt`)
   - Detailed logs of every run (`indexnow_log.txt`)
 - ⏰ Runs automatically every 30 minutes using GitHub Actions
@@ -56,7 +56,8 @@ By notifying search engines instantly about new content, you can improve SEO per
 ```
 .
 ├── indexnow.py                 # Main Python script
-├── submitted_urls.txt          # History of all submitted URLs
+├── submission_history.json     # History of submitted URLs with dates
+├── submitted_urls.txt          # Legacy history (auto-migrated)
 ├── urls_to_submit.txt          # Newly detected URLs awaiting submission
 ├── indexnow_log.txt            # Detailed runtime logs
 ├── .github/
@@ -150,6 +151,7 @@ https://neovise.me/sitemap.xml
 **IMPORTANT:** Before running the script for the first time, clean all `.txt` files:
 
 1. Open each of these files in your repository:
+   - `submission_history.json` (if it exists)
    - `submitted_urls.txt`
    - `urls_to_submit.txt`
    - `indexnow_log.txt`
@@ -202,13 +204,13 @@ You can also manually trigger the workflow:
 ```mermaid
 graph TD
     A[GitHub Actions Triggers] --> B[Fetch Sitemap]
-    B --> C[Extract All URLs]
-    C --> D[Load Previously Submitted URLs]
-    D --> E{New URLs Found?}
+    B --> C[Extract URLs & Lastmod Dates]
+    C --> D[Load Submission History]
+    D --> E{New or Updated?}
     E -->|Yes| F[Save to urls_to_submit.txt]
-    E -->|No| G[Log: No New URLs]
+    E -->|No| G[Log: No Changes]
     F --> H[Submit to IndexNow API]
-    H --> I[Update submitted_urls.txt]
+    H --> I[Update submission_history.json]
     I --> J[Log Results]
     G --> J
     J --> K[Commit Changes to Repo]
@@ -217,12 +219,12 @@ graph TD
 **Detailed Process:**
 
 1. **Fetch Sitemap:** Downloads your sitemap XML file
-2. **Parse URLs:** Extracts all `<loc>` URLs (including from nested sitemaps)
-3. **Compare:** Reads `submitted_urls.txt` to identify new URLs
-4. **Detect New URLs:** Filters out already-submitted URLs
-5. **Save:** Writes new URLs to `urls_to_submit.txt`
+2. **Parse URLs:** Extracts all `<loc>` URLs and `<lastmod>` dates
+3. **Compare:** Checks `submission_history.json` for existing entries
+4. **Detect Changes:** Identifies new URLs OR URLs where `lastmod` > stored date
+5. **Save:** Writes eligible URLs to `urls_to_submit.txt`
 6. **Submit:** Sends URLs to IndexNow API endpoint
-7. **Update History:** Adds submitted URLs to `submitted_urls.txt`
+7. **Update History:** Saves new dates to `submission_history.json`
 8. **Log:** Records all activities in `indexnow_log.txt`
 9. **Commit:** GitHub Actions commits updated files automatically
 
@@ -236,8 +238,9 @@ The script generates three tracking files:
 
 | File                    | Purpose                                      |
 |-------------------------|----------------------------------------------|
-| `submitted_urls.txt`    | Historical record of all submitted URLs      |
-| `urls_to_submit.txt`    | New URLs detected in the current run         |
+| `submission_history.json` | JSON record of URLs and their last submission dates |
+| `submitted_urls.txt`    | Legacy text file (migrated automatically)    |
+| `urls_to_submit.txt`    | New/Updated URLs detected in the current run |
 | `indexnow_log.txt`      | Detailed logs with timestamps and status     |
 
 ### Viewing Logs
