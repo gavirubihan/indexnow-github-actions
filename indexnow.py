@@ -183,8 +183,12 @@ def identify_urls_to_submit(sitemap_urls, history):
             
         history_lastmod = history.get(url)
         if current_lastmod and history_lastmod:
+            # DEBUG LOGGING for specific URL
+            if "li-fi-technology" in url:
+                 log_file(f"DEBUG: Checking {url}: Sitemap={current_lastmod} History={history_lastmod}")
+            
             if current_lastmod > history_lastmod:
-                log_file(f"Updated content: {url} ({current_lastmod})")
+                log_file(f"Updated content: {url} ({current_lastmod} > {history_lastmod})")
                 to_submit.append(url)
     
     return to_submit
