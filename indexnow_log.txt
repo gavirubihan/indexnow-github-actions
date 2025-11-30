@@ -17274,3 +17274,9 @@ Step 3: Identifying new URLs...
 [2025-11-30 03:05:06] Submitting 76 URLs...
 [2025-11-30 03:05:07] SUCCESS: 76 URLs submitted (Status: 200)
 [2025-11-30 03:05:07] Saved history to submission_history.json
+[2025-11-30 03:07:37] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-11-30 03:07:38] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-11-30 03:07:39] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-11-30 03:07:40] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-11-30 03:07:40] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-11-30 03:07:41] Loaded history for 76 URLs
