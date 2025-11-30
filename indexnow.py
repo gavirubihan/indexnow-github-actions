@@ -218,8 +218,15 @@ def submit_to_indexnow(urls):
 
     try:
         log_file(f"Submitting {len(urls)} URLs...")
+        log_file(f"DEBUG: Payload host: {payload['host']}")
+        log_file(f"DEBUG: Payload URL count: {len(payload['urlList'])}")
+        
         response = session.post(INDEXNOW_ENDPOINT, json=payload, timeout=60)
         status = response.status_code
+
+        # DEBUG: Log response details
+        log_file(f"DEBUG: Response status: {status}")
+        log_file(f"DEBUG: Response body: {response.text[:200] if response.text else '(empty)'}")
 
         if status == 200 or status == 202:
             log_file(f"SUCCESS: {len(urls)} URLs submitted (Status: {status})")
@@ -234,6 +241,7 @@ def submit_to_indexnow(urls):
 
     except Exception as e:
         log(f"Submission error: {e}", level="ERROR")
+        log_file(f"DEBUG: Exception details: {type(e).__name__}: {str(e)}")
         return False
 
 def main():
@@ -284,14 +292,30 @@ def main():
     # Step 5: Submit
     console_print("[5/5] Submitting to IndexNow...", level="STEP")
     success = submit_to_indexnow(urls_to_submit)
+    
+    # DEBUG: Log submission result
+    log_file(f"DEBUG: Submission success = {success}")
 
     # Update History
     if success:
+        log_file("DEBUG: Starting history update...")
+        update_count = 0
         for url in urls_to_submit:
             if url in sitemap_data:
                 history[url] = sitemap_data[url]
-        save_submission_history(history)
-        console_print("History updated.", level="SUCCESS")
+                update_count += 1
+        log_file(f"DEBUG: Updated {update_count} URLs in history dict")
+        
+        save_result = save_submission_history(history)
+        log_file(f"DEBUG: save_submission_history returned {save_result}")
+        
+        if save_result:
+            console_print("History updated.", level="SUCCESS")
+        else:
+            console_print("History update failed!", level="ERROR")
+    else:
+        log_file("DEBUG: Skipping history update due to failed submission")
+        console_print("History NOT updated (submission failed).", level="WARNING")
 
     # Summary
     print("\n" + "=" * 50)
