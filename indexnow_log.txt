@@ -17927,3 +17927,23 @@ Step 3: Identifying new URLs...
 [2025-12-02 01:05:32] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2025-12-02 01:05:32] Loaded history for 76 URLs
 [2025-12-02 01:05:32] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.022Z History=2025-11-30T03:08:57.022Z
+[2025-12-02 02:58:40] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-02 02:58:42] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-12-02 02:58:43] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-12-02 02:58:44] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-12-02 02:58:45] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-12-02 02:58:46] Loaded history for 76 URLs
+[2025-12-02 02:58:46] Updated content: https://neovise.me/what-is-cultured-meat-process-health/ (2025-12-02T02:39:30.000Z > 2025-11-16T12:48:18.000Z)
+[2025-12-02 02:58:46] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.022Z History=2025-11-30T03:08:57.022Z
+[2025-12-02 02:58:46] Updated content: https://neovise.me/author/neovise-staff/ (2025-12-02T01:59:25.000Z > 2025-11-30T03:08:14.691Z)
+[2025-12-02 02:58:46] Submitting 2 URLs...
+[2025-12-02 02:58:46] DEBUG: Payload host: neovise.me
+[2025-12-02 02:58:46] DEBUG: Payload URL count: 2
+[2025-12-02 02:58:47] DEBUG: Response status: 200
+[2025-12-02 02:58:47] DEBUG: Response body: (empty)
+[2025-12-02 02:58:47] SUCCESS: 2 URLs submitted (Status: 200)
+[2025-12-02 02:58:47] DEBUG: Submission success = True
+[2025-12-02 02:58:47] DEBUG: Starting history update...
+[2025-12-02 02:58:47] DEBUG: Updated 2 URLs in history dict
+[2025-12-02 02:58:47] Saved history to submission_history.json
+[2025-12-02 02:58:47] DEBUG: save_submission_history returned True
