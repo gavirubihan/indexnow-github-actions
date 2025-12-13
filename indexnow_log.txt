@@ -21449,3 +21449,27 @@ Step 3: Identifying new URLs...
 [2025-12-13 06:49:48] DEBUG: Updated 1 URLs in history dict
 [2025-12-13 06:49:48] Saved history to submission_history.json
 [2025-12-13 06:49:48] DEBUG: save_submission_history returned True
+[2025-12-13 07:13:35] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-13 07:13:36] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-12-13 07:13:37] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-12-13 07:13:38] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-12-13 07:13:38] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-12-13 07:13:39] Loaded history for 84 URLs
+[2025-12-13 07:13:39] Updated content: https://neovise.me/ (2025-12-13T07:07:02.502Z > 2025-11-16T14:23:40.101Z)
+[2025-12-13 07:13:39] New URL found: https://neovise.me/categories/
+[2025-12-13 07:13:39] Updated content: https://neovise.me/contact/ (2025-12-13T06:59:24.000Z > 2025-10-22T11:32:18.000Z)
+[2025-12-13 07:13:39] Updated content: https://neovise.me/about/ (2025-12-13T06:58:16.000Z > 2025-10-22T07:20:38.000Z)
+[2025-12-13 07:13:39] Updated content: https://neovise.me/terms/ (2025-12-13T06:57:30.000Z > 2025-10-24T16:15:50.000Z)
+[2025-12-13 07:13:39] Updated content: https://neovise.me/privacy/ (2025-12-13T06:57:14.000Z > 2025-12-04T02:42:29.536Z)
+[2025-12-13 07:13:39] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-13 07:13:39] Submitting 6 URLs...
+[2025-12-13 07:13:39] DEBUG: Payload host: neovise.me
+[2025-12-13 07:13:39] DEBUG: Payload URL count: 6
+[2025-12-13 07:13:40] DEBUG: Response status: 200
+[2025-12-13 07:13:40] DEBUG: Response body: (empty)
+[2025-12-13 07:13:40] SUCCESS: 6 URLs submitted (Status: 200)
+[2025-12-13 07:13:40] DEBUG: Submission success = True
+[2025-12-13 07:13:40] DEBUG: Starting history update...
+[2025-12-13 07:13:40] DEBUG: Updated 6 URLs in history dict
+[2025-12-13 07:13:40] Saved history to submission_history.json
+[2025-12-13 07:13:40] DEBUG: save_submission_history returned True
