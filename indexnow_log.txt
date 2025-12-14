@@ -21765,3 +21765,23 @@ Step 3: Identifying new URLs...
 [2025-12-14 01:12:52] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2025-12-14 01:12:53] Loaded history for 87 URLs
 [2025-12-14 01:12:53] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-14 03:11:35] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-14 03:11:36] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-12-14 03:11:37] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-12-14 03:11:37] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-12-14 03:11:38] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-12-14 03:11:39] Loaded history for 87 URLs
+[2025-12-14 03:11:39] New URL found: https://neovise.me/is-monosodium-glutamate-msg-carcinogen-cancer-risk/
+[2025-12-14 03:11:39] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-14 03:11:39] Updated content: https://neovise.me/author/neovise-staff/ (2025-12-14T02:43:11.000Z > 2025-12-13T17:20:43.000Z)
+[2025-12-14 03:11:39] Submitting 2 URLs...
+[2025-12-14 03:11:39] DEBUG: Payload host: neovise.me
+[2025-12-14 03:11:39] DEBUG: Payload URL count: 2
+[2025-12-14 03:11:40] DEBUG: Response status: 200
+[2025-12-14 03:11:40] DEBUG: Response body: (empty)
+[2025-12-14 03:11:40] SUCCESS: 2 URLs submitted (Status: 200)
+[2025-12-14 03:11:40] DEBUG: Submission success = True
+[2025-12-14 03:11:40] DEBUG: Starting history update...
+[2025-12-14 03:11:40] DEBUG: Updated 2 URLs in history dict
+[2025-12-14 03:11:40] Saved history to submission_history.json
+[2025-12-14 03:11:40] DEBUG: save_submission_history returned True
