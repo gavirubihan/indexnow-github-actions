@@ -22331,3 +22331,22 @@ Step 3: Identifying new URLs...
 [2025-12-15 10:50:08] DEBUG: Updated 2 URLs in history dict
 [2025-12-15 10:50:08] Saved history to submission_history.json
 [2025-12-15 10:50:08] DEBUG: save_submission_history returned True
+[2025-12-15 11:13:46] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-15 11:13:47] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-12-15 11:13:48] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-12-15 11:13:49] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-12-15 11:13:50] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-12-15 11:13:50] Loaded history for 92 URLs
+[2025-12-15 11:13:50] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-15 11:13:50] Updated content: https://neovise.me/author/matheesha/ (2025-12-15T11:05:22.000Z > 2025-12-15T10:32:05.000Z)
+[2025-12-15 11:13:50] Submitting 1 URLs...
+[2025-12-15 11:13:50] DEBUG: Payload host: neovise.me
+[2025-12-15 11:13:50] DEBUG: Payload URL count: 1
+[2025-12-15 11:13:51] DEBUG: Response status: 200
+[2025-12-15 11:13:51] DEBUG: Response body: (empty)
+[2025-12-15 11:13:51] SUCCESS: 1 URLs submitted (Status: 200)
+[2025-12-15 11:13:51] DEBUG: Submission success = True
+[2025-12-15 11:13:51] DEBUG: Starting history update...
+[2025-12-15 11:13:51] DEBUG: Updated 1 URLs in history dict
+[2025-12-15 11:13:51] Saved history to submission_history.json
+[2025-12-15 11:13:51] DEBUG: save_submission_history returned True
