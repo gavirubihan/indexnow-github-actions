@@ -22359,3 +22359,5 @@ Step 3: Identifying new URLs...
 [2025-12-15 11:39:37] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
 [2025-12-15 12:32:25] Fetching sitemap from https://neovise.me/sitemap.xml
 [2025-12-15 12:32:26] Failed to fetch sitemap: 403
+[2025-12-15 13:36:23] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-15 13:36:23] Failed to fetch sitemap: 403
