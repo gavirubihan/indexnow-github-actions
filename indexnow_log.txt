@@ -22615,3 +22615,5 @@ Step 3: Identifying new URLs...
 [2025-12-18 15:16:09] Failed to fetch sitemap: 403
 [2025-12-18 15:43:54] Fetching sitemap from https://neovise.me/sitemap.xml
 [2025-12-18 15:43:54] Failed to fetch sitemap: 403
+[2025-12-18 16:20:16] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-18 16:20:17] Failed to fetch sitemap: 403
