@@ -22673,3 +22673,28 @@ Step 3: Identifying new URLs...
 [2025-12-19 08:50:08] Failed to fetch sitemap: 403
 [2025-12-19 09:18:08] Fetching sitemap from https://neovise.me/sitemap.xml
 [2025-12-19 09:18:09] Failed to fetch sitemap: 403
+[2025-12-19 09:43:59] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-19 09:43:59] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-12-19 09:44:00] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-12-19 09:44:01] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-12-19 09:44:01] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-12-19 09:44:02] Loaded history for 92 URLs
+[2025-12-19 09:44:02] New URL found: https://neovise.me/best-free-idm-alternatives-ab-download-manager-fdm-2025/
+[2025-12-19 09:44:02] New URL found: https://neovise.me/google-gemini-3-flash-release-features-pricing-2025/
+[2025-12-19 09:44:02] New URL found: https://neovise.me/youtube-create-the-new-free-video-editor-from-google/
+[2025-12-19 09:44:02] New URL found: https://neovise.me/identify-intel-cpu-generations-model-numbers/
+[2025-12-19 09:44:02] New URL found: https://neovise.me/elon-musk-releases-x-chat-encryption-no-phone-number/
+[2025-12-19 09:44:02] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-19 09:44:02] Updated content: https://neovise.me/author/neovise-staff/ (2025-12-19T08:46:52.000Z > 2025-12-15T10:39:08.201Z)
+[2025-12-19 09:44:02] Updated content: https://neovise.me/author/gaviru/ (2025-12-18T06:08:44.000Z > 2025-12-15T09:15:06.000Z)
+[2025-12-19 09:44:02] Submitting 7 URLs...
+[2025-12-19 09:44:02] DEBUG: Payload host: neovise.me
+[2025-12-19 09:44:02] DEBUG: Payload URL count: 7
+[2025-12-19 09:44:03] DEBUG: Response status: 200
+[2025-12-19 09:44:03] DEBUG: Response body: (empty)
+[2025-12-19 09:44:03] SUCCESS: 7 URLs submitted (Status: 200)
+[2025-12-19 09:44:03] DEBUG: Submission success = True
+[2025-12-19 09:44:03] DEBUG: Starting history update...
+[2025-12-19 09:44:03] DEBUG: Updated 7 URLs in history dict
+[2025-12-19 09:44:03] Saved history to submission_history.json
+[2025-12-19 09:44:03] DEBUG: save_submission_history returned True
