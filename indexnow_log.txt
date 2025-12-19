@@ -22717,3 +22717,22 @@ Step 3: Identifying new URLs...
 [2025-12-19 10:15:54] DEBUG: Updated 1 URLs in history dict
 [2025-12-19 10:15:54] Saved history to submission_history.json
 [2025-12-19 10:15:54] DEBUG: save_submission_history returned True
+[2025-12-19 10:45:01] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-19 10:45:02] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-12-19 10:45:03] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-12-19 10:45:04] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-12-19 10:45:04] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-12-19 10:45:05] Loaded history for 97 URLs
+[2025-12-19 10:45:05] New URL found: https://neovise.me/avatar-fire-and-ash-filmmaking-techniques-vfx/
+[2025-12-19 10:45:05] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-19 10:45:05] Submitting 1 URLs...
+[2025-12-19 10:45:05] DEBUG: Payload host: neovise.me
+[2025-12-19 10:45:05] DEBUG: Payload URL count: 1
+[2025-12-19 10:45:06] DEBUG: Response status: 200
+[2025-12-19 10:45:06] DEBUG: Response body: (empty)
+[2025-12-19 10:45:06] SUCCESS: 1 URLs submitted (Status: 200)
+[2025-12-19 10:45:06] DEBUG: Submission success = True
+[2025-12-19 10:45:06] DEBUG: Starting history update...
+[2025-12-19 10:45:06] DEBUG: Updated 1 URLs in history dict
+[2025-12-19 10:45:06] Saved history to submission_history.json
+[2025-12-19 10:45:06] DEBUG: save_submission_history returned True
