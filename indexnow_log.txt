@@ -22918,3 +22918,23 @@ Step 3: Identifying new URLs...
 [2025-12-20 01:03:45] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2025-12-20 01:03:46] Loaded history for 98 URLs
 [2025-12-20 01:03:46] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-20 02:54:41] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-20 02:54:42] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-12-20 02:54:42] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-12-20 02:54:43] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-12-20 02:54:44] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-12-20 02:54:44] Loaded history for 98 URLs
+[2025-12-20 02:54:44] New URL found: https://neovise.me/researchers-develop-personality-test-ai-chatbots-study-2025/
+[2025-12-20 02:54:44] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-20 02:54:44] Updated content: https://neovise.me/author/neovise-staff/ (2025-12-20T02:41:39.000Z > 2025-12-19T10:09:10.000Z)
+[2025-12-20 02:54:44] Submitting 2 URLs...
+[2025-12-20 02:54:44] DEBUG: Payload host: neovise.me
+[2025-12-20 02:54:44] DEBUG: Payload URL count: 2
+[2025-12-20 02:54:46] DEBUG: Response status: 200
+[2025-12-20 02:54:46] DEBUG: Response body: (empty)
+[2025-12-20 02:54:46] SUCCESS: 2 URLs submitted (Status: 200)
+[2025-12-20 02:54:46] DEBUG: Submission success = True
+[2025-12-20 02:54:46] DEBUG: Starting history update...
+[2025-12-20 02:54:46] DEBUG: Updated 2 URLs in history dict
+[2025-12-20 02:54:46] Saved history to submission_history.json
+[2025-12-20 02:54:46] DEBUG: save_submission_history returned True
