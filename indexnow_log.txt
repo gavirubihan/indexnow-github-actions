@@ -23970,3 +23970,27 @@ Step 3: Identifying new URLs...
 [2025-12-23 10:16:27] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2025-12-23 10:16:27] Loaded history for 100 URLs
 [2025-12-23 10:16:27] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-23 10:45:52] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-23 10:45:53] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-12-23 10:45:54] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-12-23 10:45:54] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-12-23 10:45:55] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-12-23 10:45:56] Loaded history for 100 URLs
+[2025-12-23 10:45:56] Updated content: https://neovise.me/identify-intel-cpu-generations-model-numbers/ (2025-12-23T10:32:50.765Z > 2025-12-17T04:07:15.000Z)
+[2025-12-23 10:45:56] Updated content: https://neovise.me/google-gemini-3-flash-release-features-pricing-2025/ (2025-12-23T10:32:30.289Z > 2025-12-18T02:41:12.000Z)
+[2025-12-23 10:45:56] Updated content: https://neovise.me/best-free-idm-alternatives-ab-download-manager-fdm-2025/ (2025-12-23T10:32:14.023Z > 2025-12-19T08:57:06.000Z)
+[2025-12-23 10:45:56] Updated content: https://neovise.me/avatar-fire-and-ash-filmmaking-techniques-vfx/ (2025-12-23T10:31:51.052Z > 2025-12-19T10:35:03.000Z)
+[2025-12-23 10:45:56] Updated content: https://neovise.me/celebrate-christmas-with-technology-2025/ (2025-12-23T10:31:27.436Z > 2025-12-22T03:49:26.000Z)
+[2025-12-23 10:45:56] New URL found: https://neovise.me/elon-musks-grokipedia-a-new-challenge-to-wikipedia/
+[2025-12-23 10:45:56] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-23 10:45:56] Submitting 6 URLs...
+[2025-12-23 10:45:56] DEBUG: Payload host: neovise.me
+[2025-12-23 10:45:56] DEBUG: Payload URL count: 6
+[2025-12-23 10:45:56] DEBUG: Response status: 200
+[2025-12-23 10:45:56] DEBUG: Response body: (empty)
+[2025-12-23 10:45:56] SUCCESS: 6 URLs submitted (Status: 200)
+[2025-12-23 10:45:56] DEBUG: Submission success = True
+[2025-12-23 10:45:56] DEBUG: Starting history update...
+[2025-12-23 10:45:56] DEBUG: Updated 6 URLs in history dict
+[2025-12-23 10:45:56] Saved history to submission_history.json
+[2025-12-23 10:45:56] DEBUG: save_submission_history returned True
