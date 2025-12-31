@@ -26406,3 +26406,10 @@ Step 3: Identifying new URLs...
 [2025-12-31 05:45:42] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2025-12-31 05:45:43] Loaded history for 108 URLs
 [2025-12-31 05:45:43] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2025-12-31 06:23:23] Fetching sitemap from https://neovise.me/sitemap.xml
+[2025-12-31 06:23:24] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2025-12-31 06:23:25] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2025-12-31 06:23:26] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2025-12-31 06:23:27] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2025-12-31 06:23:27] Loaded history for 108 URLs
+[2025-12-31 06:23:27] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
