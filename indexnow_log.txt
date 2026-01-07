@@ -28472,3 +28472,22 @@ Step 3: Identifying new URLs...
 [2026-01-07 06:24:27] DEBUG: Updated 2 URLs in history dict
 [2026-01-07 06:24:27] Saved history to submission_history.json
 [2026-01-07 06:24:27] DEBUG: save_submission_history returned True
+[2026-01-07 06:36:57] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-01-07 06:36:58] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-01-07 06:36:59] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-01-07 06:37:00] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-01-07 06:37:00] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-01-07 06:37:01] Loaded history for 111 URLs
+[2026-01-07 06:37:01] Updated content: https://neovise.me/how-to-change-gmail-address-2025/ (2026-01-07T06:36:21.929Z > 2025-12-26T05:24:14.000Z)
+[2026-01-07 06:37:01] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-01-07 06:37:01] Submitting 1 URLs...
+[2026-01-07 06:37:01] DEBUG: Payload host: neovise.me
+[2026-01-07 06:37:01] DEBUG: Payload URL count: 1
+[2026-01-07 06:37:02] DEBUG: Response status: 200
+[2026-01-07 06:37:02] DEBUG: Response body: (empty)
+[2026-01-07 06:37:02] SUCCESS: 1 URLs submitted (Status: 200)
+[2026-01-07 06:37:02] DEBUG: Submission success = True
+[2026-01-07 06:37:02] DEBUG: Starting history update...
+[2026-01-07 06:37:02] DEBUG: Updated 1 URLs in history dict
+[2026-01-07 06:37:02] Saved history to submission_history.json
+[2026-01-07 06:37:02] DEBUG: save_submission_history returned True
