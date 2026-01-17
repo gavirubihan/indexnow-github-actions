@@ -31647,3 +31647,24 @@ Step 3: Identifying new URLs...
 [2026-01-17 12:26:46] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-01-17 12:26:47] Loaded history for 118 URLs
 [2026-01-17 12:26:47] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-01-17 13:05:27] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-01-17 13:05:28] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-01-17 13:05:29] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-01-17 13:05:30] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-01-17 13:05:31] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-01-17 13:05:31] Loaded history for 118 URLs
+[2026-01-17 13:05:31] New URL found: https://neovise.me/free-legal-anime-streaming-platforms-2026/
+[2026-01-17 13:05:31] New URL found: https://neovise.me/best-free-legal-tv-series-streaming-sites-2026/
+[2026-01-17 13:05:31] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-01-17 13:05:31] Updated content: https://neovise.me/author/neovise-staff/ (2026-01-17T12:44:45.000Z > 2026-01-14T14:30:01.000Z)
+[2026-01-17 13:05:31] Submitting 3 URLs...
+[2026-01-17 13:05:31] DEBUG: Payload host: neovise.me
+[2026-01-17 13:05:31] DEBUG: Payload URL count: 3
+[2026-01-17 13:05:32] DEBUG: Response status: 200
+[2026-01-17 13:05:32] DEBUG: Response body: (empty)
+[2026-01-17 13:05:32] SUCCESS: 3 URLs submitted (Status: 200)
+[2026-01-17 13:05:32] DEBUG: Submission success = True
+[2026-01-17 13:05:32] DEBUG: Starting history update...
+[2026-01-17 13:05:32] DEBUG: Updated 3 URLs in history dict
+[2026-01-17 13:05:32] Saved history to submission_history.json
+[2026-01-17 13:05:32] DEBUG: save_submission_history returned True
