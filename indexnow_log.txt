@@ -32579,3 +32579,24 @@ Step 3: Identifying new URLs...
 [2026-01-20 11:43:27] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-01-20 11:43:28] Loaded history for 123 URLs
 [2026-01-20 11:43:28] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-01-20 12:34:19] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-01-20 12:34:20] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-01-20 12:34:21] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-01-20 12:34:22] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-01-20 12:34:22] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-01-20 12:34:23] Loaded history for 123 URLs
+[2026-01-20 12:34:23] New URL found: https://neovise.me/importance-of-learning-multiple-programming-languages/
+[2026-01-20 12:34:23] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-01-20 12:34:23] Updated content: https://neovise.me/author/neovise-staff/ (2026-01-20T12:25:19.581Z > 2026-01-20T08:15:52.000Z)
+[2026-01-20 12:34:23] Updated content: https://neovise.me/author/matheesha/ (2026-01-20T12:20:14.000Z > 2025-12-15T11:05:22.000Z)
+[2026-01-20 12:34:23] Submitting 3 URLs...
+[2026-01-20 12:34:23] DEBUG: Payload host: neovise.me
+[2026-01-20 12:34:23] DEBUG: Payload URL count: 3
+[2026-01-20 12:34:24] DEBUG: Response status: 200
+[2026-01-20 12:34:24] DEBUG: Response body: (empty)
+[2026-01-20 12:34:24] SUCCESS: 3 URLs submitted (Status: 200)
+[2026-01-20 12:34:24] DEBUG: Submission success = True
+[2026-01-20 12:34:24] DEBUG: Starting history update...
+[2026-01-20 12:34:24] DEBUG: Updated 3 URLs in history dict
+[2026-01-20 12:34:24] Saved history to submission_history.json
+[2026-01-20 12:34:24] DEBUG: save_submission_history returned True
