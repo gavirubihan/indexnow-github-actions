@@ -34404,3 +34404,23 @@ Step 3: Identifying new URLs...
 [2026-01-27 04:30:21] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-01-27 04:30:22] Loaded history for 125 URLs
 [2026-01-27 04:30:22] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-01-27 05:21:25] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-01-27 05:21:26] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-01-27 05:21:26] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-01-27 05:21:27] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-01-27 05:21:28] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-01-27 05:21:28] Loaded history for 125 URLs
+[2026-01-27 05:21:28] New URL found: https://neovise.me/apple-airtag-2-features-release-date/
+[2026-01-27 05:21:28] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-01-27 05:21:28] Updated content: https://neovise.me/author/neovise-staff/ (2026-01-27T04:51:28.000Z > 2026-01-22T05:45:56.653Z)
+[2026-01-27 05:21:28] Submitting 2 URLs...
+[2026-01-27 05:21:28] DEBUG: Payload host: neovise.me
+[2026-01-27 05:21:28] DEBUG: Payload URL count: 2
+[2026-01-27 05:21:30] DEBUG: Response status: 200
+[2026-01-27 05:21:30] DEBUG: Response body: (empty)
+[2026-01-27 05:21:30] SUCCESS: 2 URLs submitted (Status: 200)
+[2026-01-27 05:21:30] DEBUG: Submission success = True
+[2026-01-27 05:21:30] DEBUG: Starting history update...
+[2026-01-27 05:21:30] DEBUG: Updated 2 URLs in history dict
+[2026-01-27 05:21:30] Saved history to submission_history.json
+[2026-01-27 05:21:30] DEBUG: save_submission_history returned True
