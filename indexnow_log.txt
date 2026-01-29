@@ -35076,3 +35076,10 @@ Step 3: Identifying new URLs...
 [2026-01-29 16:02:33] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
 [2026-01-29 17:03:58] Fetching sitemap from https://neovise.me/sitemap.xml
 [2026-01-29 17:04:29] Error fetching sitemap: HTTPSConnectionPool(host='neovise.me', port=443): Read timed out. (read timeout=30)
+[2026-01-29 17:59:16] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-01-29 17:59:17] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-01-29 17:59:18] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-01-29 17:59:19] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-01-29 17:59:20] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-01-29 17:59:21] Loaded history for 129 URLs
+[2026-01-29 17:59:21] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
