@@ -34973,3 +34973,27 @@ Step 3: Identifying new URLs...
 [2026-01-29 06:03:51] DEBUG: Updated 2 URLs in history dict
 [2026-01-29 06:03:51] Saved history to submission_history.json
 [2026-01-29 06:03:51] DEBUG: save_submission_history returned True
+[2026-01-29 07:11:09] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-01-29 07:11:10] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-01-29 07:11:11] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-01-29 07:11:12] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-01-29 07:11:12] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-01-29 07:11:13] Loaded history for 127 URLs
+[2026-01-29 07:11:13] Updated content: https://neovise.me/ (2026-01-29T06:42:17.680Z > 2026-01-14T14:46:15.139Z)
+[2026-01-29 07:11:13] Updated content: https://neovise.me/rss/latest/ (2026-01-29T06:42:17.652Z > 2026-01-14T14:46:15.111Z)
+[2026-01-29 07:11:13] New URL found: https://neovise.me/controlling-in-business-management-importance-process-types/
+[2026-01-29 07:11:13] Updated content: https://neovise.me/importance-of-learning-multiple-programming-languages/ (2026-01-20T12:36:52.000Z > 2026-01-20T12:27:15.000Z)
+[2026-01-29 07:11:13] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-01-29 07:11:13] Updated content: https://neovise.me/author/neovise-staff/ (2026-01-29T06:43:12.440Z > 2026-01-29T05:39:53.070Z)
+[2026-01-29 07:11:13] New URL found: https://neovise.me/author/denuwan/
+[2026-01-29 07:11:13] Submitting 6 URLs...
+[2026-01-29 07:11:13] DEBUG: Payload host: neovise.me
+[2026-01-29 07:11:13] DEBUG: Payload URL count: 6
+[2026-01-29 07:11:14] DEBUG: Response status: 200
+[2026-01-29 07:11:14] DEBUG: Response body: (empty)
+[2026-01-29 07:11:14] SUCCESS: 6 URLs submitted (Status: 200)
+[2026-01-29 07:11:14] DEBUG: Submission success = True
+[2026-01-29 07:11:14] DEBUG: Starting history update...
+[2026-01-29 07:11:14] DEBUG: Updated 6 URLs in history dict
+[2026-01-29 07:11:14] Saved history to submission_history.json
+[2026-01-29 07:11:14] DEBUG: save_submission_history returned True
