@@ -35983,3 +35983,23 @@ Step 3: Identifying new URLs...
 [2026-02-02 14:40:21] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-02-02 14:40:21] Loaded history for 130 URLs
 [2026-02-02 14:40:21] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-02-02 15:32:09] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-02-02 15:32:10] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-02-02 15:32:11] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-02-02 15:32:12] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-02-02 15:32:13] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-02-02 15:32:14] Loaded history for 130 URLs
+[2026-02-02 15:32:14] New URL found: https://neovise.me/how-apples-new-vapor-chamber-cooling-works-2026/
+[2026-02-02 15:32:14] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-02-02 15:32:14] Updated content: https://neovise.me/author/neovise-staff/ (2026-02-02T14:59:39.894Z > 2026-02-01T16:06:41.973Z)
+[2026-02-02 15:32:14] Submitting 2 URLs...
+[2026-02-02 15:32:14] DEBUG: Payload host: neovise.me
+[2026-02-02 15:32:14] DEBUG: Payload URL count: 2
+[2026-02-02 15:32:14] DEBUG: Response status: 200
+[2026-02-02 15:32:14] DEBUG: Response body: (empty)
+[2026-02-02 15:32:14] SUCCESS: 2 URLs submitted (Status: 200)
+[2026-02-02 15:32:14] DEBUG: Submission success = True
+[2026-02-02 15:32:14] DEBUG: Starting history update...
+[2026-02-02 15:32:14] DEBUG: Updated 2 URLs in history dict
+[2026-02-02 15:32:14] Saved history to submission_history.json
+[2026-02-02 15:32:14] DEBUG: save_submission_history returned True
