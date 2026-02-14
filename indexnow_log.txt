@@ -38178,3 +38178,22 @@ Step 3: Identifying new URLs...
 [2026-02-14 07:52:18] DEBUG: Updated 1 URLs in history dict
 [2026-02-14 07:52:18] Saved history to submission_history.json
 [2026-02-14 07:52:18] DEBUG: save_submission_history returned True
+[2026-02-14 08:23:11] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-02-14 08:23:12] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-02-14 08:23:13] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-02-14 08:23:15] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-02-14 08:23:15] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-02-14 08:23:16] Loaded history for 136 URLs
+[2026-02-14 08:23:16] New URL found: https://neovise.me/google-android-airdrop-support-2026/
+[2026-02-14 08:23:16] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-02-14 08:23:16] Submitting 1 URLs...
+[2026-02-14 08:23:16] DEBUG: Payload host: neovise.me
+[2026-02-14 08:23:16] DEBUG: Payload URL count: 1
+[2026-02-14 08:23:17] DEBUG: Response status: 200
+[2026-02-14 08:23:17] DEBUG: Response body: (empty)
+[2026-02-14 08:23:17] SUCCESS: 1 URLs submitted (Status: 200)
+[2026-02-14 08:23:17] DEBUG: Submission success = True
+[2026-02-14 08:23:17] DEBUG: Starting history update...
+[2026-02-14 08:23:17] DEBUG: Updated 1 URLs in history dict
+[2026-02-14 08:23:17] Saved history to submission_history.json
+[2026-02-14 08:23:17] DEBUG: save_submission_history returned True
