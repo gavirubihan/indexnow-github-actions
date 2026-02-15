@@ -38543,3 +38543,25 @@ Step 3: Identifying new URLs...
 [2026-02-15 14:51:27] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-02-15 14:51:28] Loaded history for 137 URLs
 [2026-02-15 14:51:28] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-02-15 15:18:27] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-02-15 15:18:28] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-02-15 15:18:29] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-02-15 15:18:30] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-02-15 15:18:31] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-02-15 15:18:31] Loaded history for 137 URLs
+[2026-02-15 15:18:31] Updated content: https://neovise.me/ (2026-02-15T15:12:53.848Z > 2026-02-05T16:46:00.846Z)
+[2026-02-15 15:18:31] Updated content: https://neovise.me/rss/latest/ (2026-02-15T15:12:53.820Z > 2026-02-05T16:46:00.821Z)
+[2026-02-15 15:18:31] New URL found: https://neovise.me/best-free-tools-to-improve-gaming-performance-on-pc-2026-guide/
+[2026-02-15 15:18:31] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-02-15 15:18:31] Updated content: https://neovise.me/author/neovise-staff/ (2026-02-15T15:13:22.475Z > 2026-02-15T14:20:09.000Z)
+[2026-02-15 15:18:31] Submitting 4 URLs...
+[2026-02-15 15:18:31] DEBUG: Payload host: neovise.me
+[2026-02-15 15:18:31] DEBUG: Payload URL count: 4
+[2026-02-15 15:18:32] DEBUG: Response status: 200
+[2026-02-15 15:18:32] DEBUG: Response body: (empty)
+[2026-02-15 15:18:32] SUCCESS: 4 URLs submitted (Status: 200)
+[2026-02-15 15:18:32] DEBUG: Submission success = True
+[2026-02-15 15:18:32] DEBUG: Starting history update...
+[2026-02-15 15:18:32] DEBUG: Updated 4 URLs in history dict
+[2026-02-15 15:18:32] Saved history to submission_history.json
+[2026-02-15 15:18:32] DEBUG: save_submission_history returned True
