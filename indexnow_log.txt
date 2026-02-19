@@ -39205,3 +39205,26 @@ Step 3: Identifying new URLs...
 [2026-02-19 06:35:11] DEBUG: Updated 1 URLs in history dict
 [2026-02-19 06:35:11] Saved history to submission_history.json
 [2026-02-19 06:35:11] DEBUG: save_submission_history returned True
+[2026-02-19 07:44:20] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-02-19 07:44:21] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-02-19 07:44:22] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-02-19 07:44:22] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-02-19 07:44:23] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-02-19 07:44:24] Loaded history for 138 URLs
+[2026-02-19 07:44:24] Updated content: https://neovise.me/ (2026-02-19T06:39:10.934Z > 2026-02-15T15:12:53.848Z)
+[2026-02-19 07:44:24] Updated content: https://neovise.me/rss/latest/ (2026-02-19T06:39:10.906Z > 2026-02-15T15:12:53.820Z)
+[2026-02-19 07:44:24] New URL found: https://neovise.me/google-lyria-3-ai-music-generator-gemini/
+[2026-02-19 07:44:24] New URL found: https://neovise.me/airpods-pro-3-premium-model-2026-ir-camera-upgrade/
+[2026-02-19 07:44:24] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-02-19 07:44:24] Updated content: https://neovise.me/author/neovise-staff/ (2026-02-19T07:42:21.792Z > 2026-02-19T06:34:41.730Z)
+[2026-02-19 07:44:24] Submitting 5 URLs...
+[2026-02-19 07:44:24] DEBUG: Payload host: neovise.me
+[2026-02-19 07:44:24] DEBUG: Payload URL count: 5
+[2026-02-19 07:44:24] DEBUG: Response status: 200
+[2026-02-19 07:44:24] DEBUG: Response body: (empty)
+[2026-02-19 07:44:24] SUCCESS: 5 URLs submitted (Status: 200)
+[2026-02-19 07:44:24] DEBUG: Submission success = True
+[2026-02-19 07:44:24] DEBUG: Starting history update...
+[2026-02-19 07:44:24] DEBUG: Updated 5 URLs in history dict
+[2026-02-19 07:44:24] Saved history to submission_history.json
+[2026-02-19 07:44:24] DEBUG: save_submission_history returned True
