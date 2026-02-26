@@ -40667,3 +40667,24 @@ Step 3: Identifying new URLs...
 [2026-02-26 05:16:42] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-02-26 05:16:43] Loaded history for 145 URLs
 [2026-02-26 05:16:43] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-02-26 06:32:42] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-02-26 06:32:44] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-02-26 06:32:45] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-02-26 06:32:47] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-02-26 06:32:48] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-02-26 06:32:50] Loaded history for 145 URLs
+[2026-02-26 06:32:50] Updated content: https://neovise.me/samsung-galaxy-s26-ultra-release-features-2026/ (2026-02-26T06:28:09.201Z > 2026-02-26T02:52:29.080Z)
+[2026-02-26 06:32:50] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-02-26 06:32:50] Updated content: https://neovise.me/author/neovise-staff/ (2026-02-26T06:22:34.658Z > 2026-02-26T01:57:34.000Z)
+[2026-02-26 06:32:50] Updated content: https://neovise.me/tag/ai/ (2026-02-26T06:26:59.000Z > 2026-01-20T05:36:27.000Z)
+[2026-02-26 06:32:50] Submitting 3 URLs...
+[2026-02-26 06:32:50] DEBUG: Payload host: neovise.me
+[2026-02-26 06:32:50] DEBUG: Payload URL count: 3
+[2026-02-26 06:32:51] DEBUG: Response status: 200
+[2026-02-26 06:32:51] DEBUG: Response body: (empty)
+[2026-02-26 06:32:51] SUCCESS: 3 URLs submitted (Status: 200)
+[2026-02-26 06:32:51] DEBUG: Submission success = True
+[2026-02-26 06:32:51] DEBUG: Starting history update...
+[2026-02-26 06:32:51] DEBUG: Updated 3 URLs in history dict
+[2026-02-26 06:32:51] Saved history to submission_history.json
+[2026-02-26 06:32:51] DEBUG: save_submission_history returned True
