@@ -40877,3 +40877,23 @@ Step 3: Identifying new URLs...
 [2026-02-27 11:03:55] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-02-27 11:03:56] Loaded history for 145 URLs
 [2026-02-27 11:03:56] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-02-27 11:51:14] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-02-27 11:51:15] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-02-27 11:51:16] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-02-27 11:51:16] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-02-27 11:51:17] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-02-27 11:51:18] Loaded history for 145 URLs
+[2026-02-27 11:51:18] New URL found: https://neovise.me/google-nano-banana-2-release-features-2026/
+[2026-02-27 11:51:18] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-02-27 11:51:18] Updated content: https://neovise.me/author/neovise-staff/ (2026-02-27T11:22:16.000Z > 2026-02-26T06:22:34.658Z)
+[2026-02-27 11:51:18] Submitting 2 URLs...
+[2026-02-27 11:51:18] DEBUG: Payload host: neovise.me
+[2026-02-27 11:51:18] DEBUG: Payload URL count: 2
+[2026-02-27 11:51:19] DEBUG: Response status: 200
+[2026-02-27 11:51:19] DEBUG: Response body: (empty)
+[2026-02-27 11:51:19] SUCCESS: 2 URLs submitted (Status: 200)
+[2026-02-27 11:51:19] DEBUG: Submission success = True
+[2026-02-27 11:51:19] DEBUG: Starting history update...
+[2026-02-27 11:51:19] DEBUG: Updated 2 URLs in history dict
+[2026-02-27 11:51:19] Saved history to submission_history.json
+[2026-02-27 11:51:19] DEBUG: save_submission_history returned True
