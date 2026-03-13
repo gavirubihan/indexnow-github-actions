@@ -1,4 +1,1 @@
-https://neovise.me/
-https://neovise.me/rss/latest/
-https://neovise.me/llms/
 https://neovise.me/author/neovise-staff/
