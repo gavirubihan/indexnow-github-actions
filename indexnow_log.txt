@@ -44980,3 +44980,25 @@ Step 3: Identifying new URLs...
 [2026-03-17 01:25:26] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-03-17 01:25:27] Loaded history for 156 URLs
 [2026-03-17 01:25:27] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-17 03:55:14] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-03-17 03:55:15] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-03-17 03:55:15] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-03-17 03:55:16] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-03-17 03:55:16] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-03-17 03:55:17] Loaded history for 156 URLs
+[2026-03-17 03:55:17] Updated content: https://neovise.me/what-is-ambient-computing-explained-simply/ (2026-03-17T03:24:48.862Z > 2026-03-14T17:30:06.759Z)
+[2026-03-17 03:55:17] Updated content: https://neovise.me/what-is-cpu-scheduling-operating-system-guide/ (2026-03-17T03:23:16.684Z > 2026-03-16T08:59:30.962Z)
+[2026-03-17 03:55:17] New URL found: https://neovise.me/best-free-cpu-and-gpu-temperature-monitor-tools/
+[2026-03-17 03:55:17] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-17 03:55:17] Updated content: https://neovise.me/author/neovise-staff/ (2026-03-17T03:17:41.265Z > 2026-03-16T08:53:35.032Z)
+[2026-03-17 03:55:17] Submitting 4 URLs...
+[2026-03-17 03:55:17] DEBUG: Payload host: neovise.me
+[2026-03-17 03:55:17] DEBUG: Payload URL count: 4
+[2026-03-17 03:55:18] DEBUG: Response status: 200
+[2026-03-17 03:55:18] DEBUG: Response body: (empty)
+[2026-03-17 03:55:18] SUCCESS: 4 URLs submitted (Status: 200)
+[2026-03-17 03:55:18] DEBUG: Submission success = True
+[2026-03-17 03:55:18] DEBUG: Starting history update...
+[2026-03-17 03:55:18] DEBUG: Updated 4 URLs in history dict
+[2026-03-17 03:55:18] Saved history to submission_history.json
+[2026-03-17 03:55:18] DEBUG: save_submission_history returned True
