@@ -45091,3 +45091,27 @@ Step 3: Identifying new URLs...
 [2026-03-17 14:15:39] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-03-17 14:15:39] Loaded history for 158 URLs
 [2026-03-17 14:15:39] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-17 15:36:19] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-03-17 15:36:19] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-03-17 15:36:20] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-03-17 15:36:20] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-03-17 15:36:21] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-03-17 15:36:21] Loaded history for 158 URLs
+[2026-03-17 15:36:21] Updated content: https://neovise.me/bitchat-privacy-vs-traditional-chat-apps/ (2026-03-17T14:31:59.213Z > 2026-01-22T03:55:35.000Z)
+[2026-03-17 15:36:21] Updated content: https://neovise.me/what-is-openwrt-router-firmware-guide/ (2026-03-17T14:29:29.728Z > 2026-02-23T03:39:33.000Z)
+[2026-03-17 15:36:21] Updated content: https://neovise.me/what-is-llms-txt-guide-structure-purpose-2026/ (2026-03-17T14:24:59.811Z > 2026-03-01T11:38:26.000Z)
+[2026-03-17 15:36:21] Updated content: https://neovise.me/what-is-hardware-accelerated-gpu-scheduling-explained/ (2026-03-17T14:23:39.638Z > 2026-03-10T02:51:48.000Z)
+[2026-03-17 15:36:21] Updated content: https://neovise.me/is-monosodium-glutamate-msg-carcinogen-cancer-risk/ (2026-03-17T14:21:53.868Z > 2025-12-14T02:57:03.000Z)
+[2026-03-17 15:36:21] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-17 15:36:21] Updated content: https://neovise.me/author/neovise-staff/ (2026-03-17T14:20:30.214Z > 2026-03-17T05:50:53.000Z)
+[2026-03-17 15:36:21] Submitting 6 URLs...
+[2026-03-17 15:36:21] DEBUG: Payload host: neovise.me
+[2026-03-17 15:36:21] DEBUG: Payload URL count: 6
+[2026-03-17 15:36:22] DEBUG: Response status: 200
+[2026-03-17 15:36:22] DEBUG: Response body: (empty)
+[2026-03-17 15:36:22] SUCCESS: 6 URLs submitted (Status: 200)
+[2026-03-17 15:36:22] DEBUG: Submission success = True
+[2026-03-17 15:36:22] DEBUG: Starting history update...
+[2026-03-17 15:36:22] DEBUG: Updated 6 URLs in history dict
+[2026-03-17 15:36:22] Saved history to submission_history.json
+[2026-03-17 15:36:22] DEBUG: save_submission_history returned True
