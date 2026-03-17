@@ -45002,3 +45002,23 @@ Step 3: Identifying new URLs...
 [2026-03-17 03:55:18] DEBUG: Updated 4 URLs in history dict
 [2026-03-17 03:55:18] Saved history to submission_history.json
 [2026-03-17 03:55:18] DEBUG: save_submission_history returned True
+[2026-03-17 05:18:57] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-03-17 05:18:57] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-03-17 05:18:57] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-03-17 05:18:58] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-03-17 05:18:59] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-03-17 05:18:59] Loaded history for 157 URLs
+[2026-03-17 05:18:59] Updated content: https://neovise.me/what-is-a-network-socket-simple-explanation/ (2026-03-17T04:52:54.024Z > 2026-03-14T17:30:19.890Z)
+[2026-03-17 05:18:59] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-17 05:18:59] Updated content: https://neovise.me/author/neovise-staff/ (2026-03-17T04:50:47.125Z > 2026-03-17T03:17:41.265Z)
+[2026-03-17 05:18:59] Submitting 2 URLs...
+[2026-03-17 05:18:59] DEBUG: Payload host: neovise.me
+[2026-03-17 05:18:59] DEBUG: Payload URL count: 2
+[2026-03-17 05:19:00] DEBUG: Response status: 200
+[2026-03-17 05:19:00] DEBUG: Response body: (empty)
+[2026-03-17 05:19:00] SUCCESS: 2 URLs submitted (Status: 200)
+[2026-03-17 05:19:00] DEBUG: Submission success = True
+[2026-03-17 05:19:00] DEBUG: Starting history update...
+[2026-03-17 05:19:00] DEBUG: Updated 2 URLs in history dict
+[2026-03-17 05:19:00] Saved history to submission_history.json
+[2026-03-17 05:19:00] DEBUG: save_submission_history returned True
