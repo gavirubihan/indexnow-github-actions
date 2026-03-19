@@ -45365,3 +45365,26 @@ Step 3: Identifying new URLs...
 [2026-03-19 01:28:54] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-03-19 01:28:55] Loaded history for 158 URLs
 [2026-03-19 01:28:55] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-19 04:03:57] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-03-19 04:03:58] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-03-19 04:03:58] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-03-19 04:03:59] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-03-19 04:03:59] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-03-19 04:04:00] Loaded history for 158 URLs
+[2026-03-19 04:04:00] Updated content: https://neovise.me/best-free-courses-to-learn-ai-ml-2026/ (2026-03-19T02:40:29.946Z > 2025-11-08T01:52:31.000Z)
+[2026-03-19 04:04:00] Updated content: https://neovise.me/best-free-automation-tools-pros-cons-2025/ (2026-03-19T02:39:02.904Z > 2025-12-14T11:59:19.910Z)
+[2026-03-19 04:04:00] Updated content: https://neovise.me/amd-virtual-super-resolution-vsr-guide/ (2026-03-19T02:37:03.538Z > 2026-01-14T10:30:42.000Z)
+[2026-03-19 04:04:00] Updated content: https://neovise.me/what-is-thermal-throttling/ (2026-03-19T02:35:30.893Z > 2026-01-20T08:48:37.000Z)
+[2026-03-19 04:04:00] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-19 04:04:00] Updated content: https://neovise.me/author/neovise-staff/ (2026-03-19T02:33:43.662Z > 2026-03-18T05:45:37.567Z)
+[2026-03-19 04:04:00] Submitting 5 URLs...
+[2026-03-19 04:04:00] DEBUG: Payload host: neovise.me
+[2026-03-19 04:04:00] DEBUG: Payload URL count: 5
+[2026-03-19 04:04:00] DEBUG: Response status: 200
+[2026-03-19 04:04:00] DEBUG: Response body: (empty)
+[2026-03-19 04:04:00] SUCCESS: 5 URLs submitted (Status: 200)
+[2026-03-19 04:04:00] DEBUG: Submission success = True
+[2026-03-19 04:04:00] DEBUG: Starting history update...
+[2026-03-19 04:04:00] DEBUG: Updated 5 URLs in history dict
+[2026-03-19 04:04:00] Saved history to submission_history.json
+[2026-03-19 04:04:00] DEBUG: save_submission_history returned True
