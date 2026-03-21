@@ -45794,3 +45794,27 @@ Step 3: Identifying new URLs...
 [2026-03-21 03:34:02] DEBUG: Updated 1 URLs in history dict
 [2026-03-21 03:34:02] Saved history to submission_history.json
 [2026-03-21 03:34:02] DEBUG: save_submission_history returned True
+[2026-03-21 05:02:55] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-03-21 05:02:55] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-03-21 05:02:56] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-03-21 05:02:57] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-03-21 05:02:57] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-03-21 05:02:58] Loaded history for 158 URLs
+[2026-03-21 05:02:58] Updated content: https://neovise.me/best-free-idm-alternatives-ab-download-manager-fdm-2025/ (2026-03-21T04:31:21.385Z > 2025-12-23T12:49:25.900Z)
+[2026-03-21 05:02:58] Updated content: https://neovise.me/what-are-optical-chips-future-computers/ (2026-03-21T04:30:04.486Z > 2025-12-25T01:39:24.000Z)
+[2026-03-21 05:02:58] Updated content: https://neovise.me/best-free-tools-speed-up-windows-pc-2026/ (2026-03-21T04:27:00.278Z > 2026-02-08T16:49:55.000Z)
+[2026-03-21 05:02:58] Updated content: https://neovise.me/edge-computing-2026-how-it-works-types/ (2026-03-21T04:25:06.140Z > 2026-01-08T02:24:28.000Z)
+[2026-03-21 05:02:58] New URL found: https://neovise.me/8-best-books-every-ai-engineer-should-read/
+[2026-03-21 05:02:58] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-21 05:02:58] Updated content: https://neovise.me/author/neovise-staff/ (2026-03-21T04:22:58.694Z > 2026-03-21T03:17:05.000Z)
+[2026-03-21 05:02:58] Submitting 6 URLs...
+[2026-03-21 05:02:58] DEBUG: Payload host: neovise.me
+[2026-03-21 05:02:58] DEBUG: Payload URL count: 6
+[2026-03-21 05:02:58] DEBUG: Response status: 200
+[2026-03-21 05:02:58] DEBUG: Response body: (empty)
+[2026-03-21 05:02:58] SUCCESS: 6 URLs submitted (Status: 200)
+[2026-03-21 05:02:58] DEBUG: Submission success = True
+[2026-03-21 05:02:58] DEBUG: Starting history update...
+[2026-03-21 05:02:58] DEBUG: Updated 6 URLs in history dict
+[2026-03-21 05:02:58] Saved history to submission_history.json
+[2026-03-21 05:02:58] DEBUG: save_submission_history returned True
