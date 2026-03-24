@@ -46503,3 +46503,23 @@ Step 3: Identifying new URLs...
 [2026-03-24 01:22:44] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-03-24 01:22:44] Loaded history for 159 URLs
 [2026-03-24 01:22:44] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-24 03:55:12] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-03-24 03:55:13] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-03-24 03:55:14] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-03-24 03:55:14] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-03-24 03:55:15] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-03-24 03:55:15] Loaded history for 159 URLs
+[2026-03-24 03:55:15] New URL found: https://neovise.me/what-is-vram-video-memory-explained-guide/
+[2026-03-24 03:55:15] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-24 03:55:15] Updated content: https://neovise.me/author/neovise-staff/ (2026-03-24T02:11:15.000Z > 2026-03-23T17:48:04.000Z)
+[2026-03-24 03:55:15] Submitting 2 URLs...
+[2026-03-24 03:55:15] DEBUG: Payload host: neovise.me
+[2026-03-24 03:55:15] DEBUG: Payload URL count: 2
+[2026-03-24 03:55:16] DEBUG: Response status: 200
+[2026-03-24 03:55:16] DEBUG: Response body: (empty)
+[2026-03-24 03:55:16] SUCCESS: 2 URLs submitted (Status: 200)
+[2026-03-24 03:55:16] DEBUG: Submission success = True
+[2026-03-24 03:55:16] DEBUG: Starting history update...
+[2026-03-24 03:55:16] DEBUG: Updated 2 URLs in history dict
+[2026-03-24 03:55:16] Saved history to submission_history.json
+[2026-03-24 03:55:16] DEBUG: save_submission_history returned True
