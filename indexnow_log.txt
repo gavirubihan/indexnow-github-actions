@@ -46591,3 +46591,23 @@ Step 3: Identifying new URLs...
 [2026-03-24 10:43:18] DEBUG: Updated 3 URLs in history dict
 [2026-03-24 10:43:18] Saved history to submission_history.json
 [2026-03-24 10:43:18] DEBUG: save_submission_history returned True
+[2026-03-24 11:39:44] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-03-24 11:39:45] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-03-24 11:39:45] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-03-24 11:39:46] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-03-24 11:39:47] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-03-24 11:39:47] Loaded history for 160 URLs
+[2026-03-24 11:39:47] Updated content: https://neovise.me/adsense-alternatives-no-minimum-traffic-new-blogs/ (2026-03-24T11:14:24.595Z > 2025-12-14T12:11:22.768Z)
+[2026-03-24 11:39:47] Updated content: https://neovise.me/how-apple-airtags-work/ (2026-03-24T11:12:37.488Z > 2025-10-26T06:03:07.000Z)
+[2026-03-24 11:39:47] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-24 11:39:47] Submitting 2 URLs...
+[2026-03-24 11:39:47] DEBUG: Payload host: neovise.me
+[2026-03-24 11:39:47] DEBUG: Payload URL count: 2
+[2026-03-24 11:39:48] DEBUG: Response status: 200
+[2026-03-24 11:39:48] DEBUG: Response body: (empty)
+[2026-03-24 11:39:48] SUCCESS: 2 URLs submitted (Status: 200)
+[2026-03-24 11:39:48] DEBUG: Submission success = True
+[2026-03-24 11:39:48] DEBUG: Starting history update...
+[2026-03-24 11:39:48] DEBUG: Updated 2 URLs in history dict
+[2026-03-24 11:39:48] Saved history to submission_history.json
+[2026-03-24 11:39:48] DEBUG: save_submission_history returned True
