@@ -46570,3 +46570,24 @@ Step 3: Identifying new URLs...
 [2026-03-24 09:48:47] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-03-24 09:48:48] Loaded history for 160 URLs
 [2026-03-24 09:48:48] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-24 10:43:14] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-03-24 10:43:15] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-03-24 10:43:16] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-03-24 10:43:16] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-03-24 10:43:17] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-03-24 10:43:17] Loaded history for 160 URLs
+[2026-03-24 10:43:17] Updated content: https://neovise.me/what-is-gan-charger-vs-silicon-pros-cons-guide/ (2026-03-24T10:20:42.716Z > 2025-12-03T02:04:11.000Z)
+[2026-03-24 10:43:17] Updated content: https://neovise.me/what-is-azure-horizondb-features-vs-cosmos-db/ (2026-03-24T10:17:59.756Z > 2025-12-15T02:33:58.000Z)
+[2026-03-24 10:43:17] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-24 10:43:17] Updated content: https://neovise.me/author/neovise-staff/ (2026-03-24T10:15:42.615Z > 2026-03-24T08:12:05.866Z)
+[2026-03-24 10:43:17] Submitting 3 URLs...
+[2026-03-24 10:43:17] DEBUG: Payload host: neovise.me
+[2026-03-24 10:43:17] DEBUG: Payload URL count: 3
+[2026-03-24 10:43:18] DEBUG: Response status: 200
+[2026-03-24 10:43:18] DEBUG: Response body: (empty)
+[2026-03-24 10:43:18] SUCCESS: 3 URLs submitted (Status: 200)
+[2026-03-24 10:43:18] DEBUG: Submission success = True
+[2026-03-24 10:43:18] DEBUG: Starting history update...
+[2026-03-24 10:43:18] DEBUG: Updated 3 URLs in history dict
+[2026-03-24 10:43:18] Saved history to submission_history.json
+[2026-03-24 10:43:18] DEBUG: save_submission_history returned True
