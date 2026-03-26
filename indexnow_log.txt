@@ -46869,3 +46869,23 @@ Step 3: Identifying new URLs...
 [2026-03-26 01:55:31] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-03-26 01:55:32] Loaded history for 160 URLs
 [2026-03-26 01:55:32] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-26 04:28:43] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-03-26 04:28:43] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-03-26 04:28:44] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-03-26 04:28:44] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-03-26 04:28:45] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-03-26 04:28:46] Loaded history for 160 URLs
+[2026-03-26 04:28:46] New URL found: https://neovise.me/what-is-shared-gpu-memory-explained-windows/
+[2026-03-26 04:28:46] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2025-11-30T03:08:57.000Z History=2025-11-30T03:08:57.022Z
+[2026-03-26 04:28:46] Updated content: https://neovise.me/author/neovise-staff/ (2026-03-26T02:15:28.000Z > 2026-03-25T02:29:48.397Z)
+[2026-03-26 04:28:46] Submitting 2 URLs...
+[2026-03-26 04:28:46] DEBUG: Payload host: neovise.me
+[2026-03-26 04:28:46] DEBUG: Payload URL count: 2
+[2026-03-26 04:28:46] DEBUG: Response status: 200
+[2026-03-26 04:28:46] DEBUG: Response body: (empty)
+[2026-03-26 04:28:46] SUCCESS: 2 URLs submitted (Status: 200)
+[2026-03-26 04:28:46] DEBUG: Submission success = True
+[2026-03-26 04:28:46] DEBUG: Starting history update...
+[2026-03-26 04:28:46] DEBUG: Updated 2 URLs in history dict
+[2026-03-26 04:28:46] Saved history to submission_history.json
+[2026-03-26 04:28:46] DEBUG: save_submission_history returned True
