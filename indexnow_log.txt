@@ -48601,3 +48601,23 @@ Step 3: Identifying new URLs...
 [2026-04-03 17:27:39] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-04-03 17:27:40] Loaded history for 167 URLs
 [2026-04-03 17:27:40] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.996Z History=2026-03-29T04:05:21.996Z
+[2026-04-03 18:00:32] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-04-03 18:00:33] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-04-03 18:00:33] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-04-03 18:00:34] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-04-03 18:00:35] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-04-03 18:00:35] Loaded history for 167 URLs
+[2026-04-03 18:00:35] Updated content: https://neovise.me/what-is-llms-txt-guide-structure-purpose-2026/ (2026-04-03T17:38:09.189Z > 2026-03-17T14:24:59.811Z)
+[2026-04-03 18:00:35] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.996Z History=2026-03-29T04:05:21.996Z
+[2026-04-03 18:00:35] Updated content: https://neovise.me/author/neovise-staff/ (2026-04-03T17:34:54.134Z > 2026-04-03T10:55:08.211Z)
+[2026-04-03 18:00:35] Submitting 2 URLs...
+[2026-04-03 18:00:35] DEBUG: Payload host: neovise.me
+[2026-04-03 18:00:35] DEBUG: Payload URL count: 2
+[2026-04-03 18:00:36] DEBUG: Response status: 200
+[2026-04-03 18:00:36] DEBUG: Response body: (empty)
+[2026-04-03 18:00:36] SUCCESS: 2 URLs submitted (Status: 200)
+[2026-04-03 18:00:36] DEBUG: Submission success = True
+[2026-04-03 18:00:36] DEBUG: Starting history update...
+[2026-04-03 18:00:36] DEBUG: Updated 2 URLs in history dict
+[2026-04-03 18:00:36] Saved history to submission_history.json
+[2026-04-03 18:00:36] DEBUG: save_submission_history returned True
