@@ -49867,3 +49867,23 @@ Step 3: Identifying new URLs...
 [2026-04-11 04:31:36] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-04-11 04:31:37] Loaded history for 169 URLs
 [2026-04-11 04:31:37] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.996Z History=2026-03-29T04:05:21.996Z
+[2026-04-11 05:55:48] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-04-11 05:55:48] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-04-11 05:55:49] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-04-11 05:55:50] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-04-11 05:55:50] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-04-11 05:55:51] Loaded history for 169 URLs
+[2026-04-11 05:55:51] New URL found: https://neovise.me/agentic-ai-explained-how-it-works-features-benefits-and-examples/
+[2026-04-11 05:55:51] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.996Z History=2026-03-29T04:05:21.996Z
+[2026-04-11 05:55:51] Updated content: https://neovise.me/author/neovise-staff/ (2026-04-11T04:54:56.202Z > 2026-04-10T12:56:44.957Z)
+[2026-04-11 05:55:51] Submitting 2 URLs...
+[2026-04-11 05:55:51] DEBUG: Payload host: neovise.me
+[2026-04-11 05:55:51] DEBUG: Payload URL count: 2
+[2026-04-11 05:55:52] DEBUG: Response status: 200
+[2026-04-11 05:55:52] DEBUG: Response body: (empty)
+[2026-04-11 05:55:52] SUCCESS: 2 URLs submitted (Status: 200)
+[2026-04-11 05:55:52] DEBUG: Submission success = True
+[2026-04-11 05:55:52] DEBUG: Starting history update...
+[2026-04-11 05:55:52] DEBUG: Updated 2 URLs in history dict
+[2026-04-11 05:55:52] Saved history to submission_history.json
+[2026-04-11 05:55:52] DEBUG: save_submission_history returned True
