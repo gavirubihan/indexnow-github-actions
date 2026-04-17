@@ -50734,3 +50734,24 @@ Step 3: Identifying new URLs...
 [2026-04-17 06:53:34] DEBUG: Updated 2 URLs in history dict
 [2026-04-17 06:53:34] Saved history to submission_history.json
 [2026-04-17 06:53:34] DEBUG: save_submission_history returned True
+[2026-04-17 08:23:05] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-04-17 08:23:05] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-04-17 08:23:06] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-04-17 08:23:06] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-04-17 08:23:07] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-04-17 08:23:07] Loaded history for 170 URLs
+[2026-04-17 08:23:07] New URL found: https://neovise.me/beginners-guide-to-webrtc-how-real-time-video-calls-work/
+[2026-04-17 08:23:07] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.996Z History=2026-03-29T04:05:21.996Z
+[2026-04-17 08:23:07] Updated content: https://neovise.me/author/neovise-staff/ (2026-04-17T07:56:36.389Z > 2026-04-17T06:28:32.049Z)
+[2026-04-17 08:23:07] Updated content: https://neovise.me/author/nirosha-madhumali/ (2026-04-17T07:54:00.000Z > 2026-04-17T06:50:17.667Z)
+[2026-04-17 08:23:07] Submitting 3 URLs...
+[2026-04-17 08:23:07] DEBUG: Payload host: neovise.me
+[2026-04-17 08:23:07] DEBUG: Payload URL count: 3
+[2026-04-17 08:23:08] DEBUG: Response status: 200
+[2026-04-17 08:23:08] DEBUG: Response body: (empty)
+[2026-04-17 08:23:08] SUCCESS: 3 URLs submitted (Status: 200)
+[2026-04-17 08:23:08] DEBUG: Submission success = True
+[2026-04-17 08:23:08] DEBUG: Starting history update...
+[2026-04-17 08:23:08] DEBUG: Updated 3 URLs in history dict
+[2026-04-17 08:23:08] Saved history to submission_history.json
+[2026-04-17 08:23:08] DEBUG: save_submission_history returned True
