@@ -53022,3 +53022,24 @@ Step 3: Identifying new URLs...
 [2026-05-06 12:23:46] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-05-06 12:23:47] Loaded history for 172 URLs
 [2026-05-06 12:23:47] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.000Z History=2026-03-29T04:05:21.996Z
+[2026-05-06 15:07:58] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-05-06 15:07:58] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-05-06 15:07:59] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-05-06 15:07:59] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-05-06 15:08:00] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-05-06 15:08:01] Loaded history for 172 URLs
+[2026-05-06 15:08:01] Updated content: https://neovise.me/beginners-guide-to-webrtc-how-real-time-video-calls-work/ (2026-05-06T15:05:45.322Z > 2026-05-03T11:32:38.392Z)
+[2026-05-06 15:08:01] Updated content: https://neovise.me/best-webrtc-alternatives-for-real-time-communication-in-2026/ (2026-05-06T15:03:59.186Z > 2026-04-30T03:35:08.000Z)
+[2026-05-06 15:08:01] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.000Z History=2026-03-29T04:05:21.996Z
+[2026-05-06 15:08:01] Updated content: https://neovise.me/author/neovise-staff/ (2026-05-06T14:54:54.688Z > 2026-05-04T02:52:30.000Z)
+[2026-05-06 15:08:01] Submitting 3 URLs...
+[2026-05-06 15:08:01] DEBUG: Payload host: neovise.me
+[2026-05-06 15:08:01] DEBUG: Payload URL count: 3
+[2026-05-06 15:08:01] DEBUG: Response status: 200
+[2026-05-06 15:08:01] DEBUG: Response body: (empty)
+[2026-05-06 15:08:01] SUCCESS: 3 URLs submitted (Status: 200)
+[2026-05-06 15:08:01] DEBUG: Submission success = True
+[2026-05-06 15:08:01] DEBUG: Starting history update...
+[2026-05-06 15:08:01] DEBUG: Updated 3 URLs in history dict
+[2026-05-06 15:08:01] Saved history to submission_history.json
+[2026-05-06 15:08:01] DEBUG: save_submission_history returned True
