@@ -55934,3 +55934,23 @@ Step 3: Identifying new URLs...
 [2026-06-11 02:52:37] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-06-11 02:52:37] Loaded history for 173 URLs
 [2026-06-11 02:52:37] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.000Z History=2026-03-29T04:05:21.996Z
+[2026-06-11 07:24:02] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-06-11 07:24:02] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-06-11 07:24:03] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-06-11 07:24:04] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-06-11 07:24:04] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-06-11 07:24:05] Loaded history for 173 URLs
+[2026-06-11 07:24:05] New URL found: https://neovise.me/vercel-functions-explained-serverless-backend/
+[2026-06-11 07:24:05] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.000Z History=2026-03-29T04:05:21.996Z
+[2026-06-11 07:24:05] Updated content: https://neovise.me/author/neovise-staff/ (2026-06-11T05:31:23.000Z > 2026-06-10T03:56:45.000Z)
+[2026-06-11 07:24:05] Submitting 2 URLs...
+[2026-06-11 07:24:05] DEBUG: Payload host: neovise.me
+[2026-06-11 07:24:05] DEBUG: Payload URL count: 2
+[2026-06-11 07:24:06] DEBUG: Response status: 200
+[2026-06-11 07:24:06] DEBUG: Response body: (empty)
+[2026-06-11 07:24:06] SUCCESS: 2 URLs submitted (Status: 200)
+[2026-06-11 07:24:06] DEBUG: Submission success = True
+[2026-06-11 07:24:06] DEBUG: Starting history update...
+[2026-06-11 07:24:06] DEBUG: Updated 2 URLs in history dict
+[2026-06-11 07:24:06] Saved history to submission_history.json
+[2026-06-11 07:24:06] DEBUG: save_submission_history returned True
