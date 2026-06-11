@@ -1,2 +1,1 @@
-https://neovise.me/vercel-functions-explained-serverless-backend/
 https://neovise.me/author/neovise-staff/
