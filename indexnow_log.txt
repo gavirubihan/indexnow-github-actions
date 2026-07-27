@@ -60322,3 +60322,24 @@ Step 3: Identifying new URLs...
 [2026-07-27 08:52:00] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
 [2026-07-27 08:52:00] Loaded history for 178 URLs
 [2026-07-27 08:52:00] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.000Z History=2026-03-29T04:05:21.996Z
+[2026-07-27 12:13:24] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-07-27 12:13:24] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-07-27 12:13:25] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-07-27 12:13:26] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-07-27 12:13:27] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-07-27 12:13:27] Loaded history for 178 URLs
+[2026-07-27 12:13:27] Updated content: https://neovise.me/best-free-tools-to-improve-gaming-performance-on-pc-2026-guide/ (2026-07-27T11:48:53.686Z > 2026-03-18T05:55:37.190Z)
+[2026-07-27 12:13:27] Updated content: https://neovise.me/what-is-openwrt-router-firmware-guide/ (2026-07-27T11:47:41.724Z > 2026-03-17T14:29:29.728Z)
+[2026-07-27 12:13:27] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.000Z History=2026-03-29T04:05:21.996Z
+[2026-07-27 12:13:27] Updated content: https://neovise.me/author/gaviru/ (2026-07-27T11:46:37.709Z > 2026-07-26T23:11:44.700Z)
+[2026-07-27 12:13:27] Submitting 3 URLs...
+[2026-07-27 12:13:27] DEBUG: Payload host: neovise.me
+[2026-07-27 12:13:27] DEBUG: Payload URL count: 3
+[2026-07-27 12:13:28] DEBUG: Response status: 200
+[2026-07-27 12:13:28] DEBUG: Response body: (empty)
+[2026-07-27 12:13:28] SUCCESS: 3 URLs submitted (Status: 200)
+[2026-07-27 12:13:28] DEBUG: Submission success = True
+[2026-07-27 12:13:28] DEBUG: Starting history update...
+[2026-07-27 12:13:28] DEBUG: Updated 3 URLs in history dict
+[2026-07-27 12:13:28] Saved history to submission_history.json
+[2026-07-27 12:13:28] DEBUG: save_submission_history returned True
