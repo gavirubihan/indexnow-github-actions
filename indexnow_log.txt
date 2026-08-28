@@ -65603,3 +65603,10 @@ Step 3: Identifying new URLs...
 [2026-08-27 17:50:46] DEBUG: Updated 1 URLs in history dict
 [2026-08-27 17:50:46] Saved history to submission_history.json
 [2026-08-27 17:50:46] DEBUG: save_submission_history returned True
+[2026-08-28 01:58:13] Fetching sitemap from https://neovise.me/sitemap.xml
+[2026-08-28 01:58:13] Found sub-sitemap: https://neovise.me/sitemap-pages.xml
+[2026-08-28 01:58:14] Found sub-sitemap: https://neovise.me/sitemap-posts.xml
+[2026-08-28 01:58:15] Found sub-sitemap: https://neovise.me/sitemap-authors.xml
+[2026-08-28 01:58:15] Found sub-sitemap: https://neovise.me/sitemap-tags.xml
+[2026-08-28 01:58:16] Loaded history for 179 URLs
+[2026-08-28 01:58:16] DEBUG: Checking https://neovise.me/li-fi-technology-explained-the-future-of-wireless-light-based-internet/: Sitemap=2026-03-29T04:05:21.000Z History=2026-03-29T04:05:21.996Z
